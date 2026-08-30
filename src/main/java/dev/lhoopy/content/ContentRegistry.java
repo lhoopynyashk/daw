@@ -13,6 +13,7 @@ public final class ContentRegistry {
     private final Map<String, SlimeDef> slimes = new LinkedHashMap<>();
     private final Map<String, LocationDef> locations = new LinkedHashMap<>();
     private final Map<String, FoodDef> foods = new LinkedHashMap<>();
+    private final Map<org.bukkit.Material, FoodDef> foodsByMaterial = new LinkedHashMap<>();
     private final Map<String, PlantDef> plants = new LinkedHashMap<>();
     private final Map<String, PlantDef> plantsBySeed = new LinkedHashMap<>();
     private final Map<String, PlortDef> plorts = new LinkedHashMap<>();
@@ -29,6 +30,7 @@ public final class ContentRegistry {
         this.slimes.clear();
         this.locations.clear();
         this.foods.clear();
+        this.foodsByMaterial.clear();
         this.plants.clear();
         this.plantsBySeed.clear();
         this.plorts.clear();
@@ -38,6 +40,11 @@ public final class ContentRegistry {
         this.slimes.putAll(content.getSlimes());
         this.locations.putAll(content.getLocations());
         this.foods.putAll(content.getFoods());
+        for (FoodDef food : content.getFoods().values()) {
+            for (org.bukkit.Material material : food.getMaterials()) {
+                this.foodsByMaterial.put(material, food);
+            }
+        }
         this.plants.putAll(content.getPlants());
         for (PlantDef plant : this.plants.values()) {
             this.plantsBySeed.put(normalize(plant.getSeedId()), plant);
@@ -82,6 +89,15 @@ public final class ContentRegistry {
             return null;
         }
         return this.foods.get(normalize(id));
+    }
+
+    /**
+     * Еда, соответствующая предмету. Связь задаётся ключом materials в foods.yml,
+     * а не таблицей в коде: иначе новый слайм с новой favorite-food молча
+     * перестаёт кормиться.
+     */
+    public FoodDef getFoodByMaterial(org.bukkit.Material material) {
+        return material == null ? null : this.foodsByMaterial.get(material);
     }
 
     public Collection<FoodDef> foods() {

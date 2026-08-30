@@ -2,6 +2,7 @@ package dev.lhoopy.content;
 
 import dev.lhoopy.core.config.ConfigValidationException;
 
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
@@ -16,6 +17,24 @@ public final class ContentValidator {
         requireNotEmpty(content.getPlorts(), "plorts");
         requireNotEmpty(content.getResources(), "resources");
         requireNotEmpty(content.getPens(), "pens");
+
+        Map<org.bukkit.Material, String> materialOwners = new HashMap<>();
+        for (FoodDef food : content.getFoods().values()) {
+            for (org.bukkit.Material material : food.getMaterials()) {
+                String previous = materialOwners.put(material, food.getId());
+                if (previous != null) {
+                    throw new ConfigValidationException("Material " + material
+                            + " is claimed by two foods: " + previous + " and " + food.getId());
+                }
+            }
+        }
+        for (SlimeDef slime : content.getSlimes().values()) {
+            if (!materialOwners.containsKey(slime.getFavoriteFood())) {
+                throw new ConfigValidationException("Slime '" + slime.getId()
+                        + "' has favorite-food " + slime.getFavoriteFood()
+                        + ", but no food in foods.yml lists this material.");
+            }
+        }
 
         Set<String> seedIds = new HashSet<>();
         for (PlantDef plant : content.getPlants().values()) {

@@ -1,6 +1,7 @@
 package dev.lhoopy.pen;
 
 import dev.lhoopy.content.ContentRegistry;
+import dev.lhoopy.content.FoodDef;
 import dev.lhoopy.content.ContentIds;
 import dev.lhoopy.content.SlimeDef;
 import dev.lhoopy.profile.PlayerProfile;
@@ -49,8 +50,9 @@ public final class PenStorageFeedingService {
         return FeedResult.success(slime.getId(), foodId);
     }
 
-    private static String foodIdFor(Material material) {
-        return FoodMappings.BY_MATERIAL.get(material);
+    private String foodIdFor(Material material) {
+        FoodDef food = this.contentRegistry.getFoodByMaterial(material);
+        return food == null ? null : food.getId();
     }
 
     public static final class FeedResult {
@@ -103,20 +105,4 @@ public final class PenStorageFeedingService {
         }
     }
 
-    private static final class FoodMappings {
-        private static final Map<Material, String> BY_MATERIAL = new HashMap<>();
-
-        static {
-            BY_MATERIAL.put(Material.APPLE, "plant_sweetroot");
-            BY_MATERIAL.put(Material.CARROT_ITEM, "plant_meadow_carrot");
-            BY_MATERIAL.put(Material.WHEAT, "plant_sweetroot");
-            BY_MATERIAL.put(Material.RAW_FISH, "plant_blue_algae");
-            BY_MATERIAL.put(Material.CACTUS, "plant_spicy_pumpkin");
-            BY_MATERIAL.put(Material.SUGAR, "plant_honeyflower");
-            BY_MATERIAL.put(Material.BROWN_MUSHROOM, "plant_bright_mushroom");
-            BY_MATERIAL.put(Material.BREAD, "plant_sweetroot");
-            BY_MATERIAL.put(Material.POTATO_ITEM, "plant_meadow_carrot");
-            BY_MATERIAL.put(Material.COOKIE, "plant_night_cap");
-        }
-    }
 }

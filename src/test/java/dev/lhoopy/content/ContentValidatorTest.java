@@ -127,6 +127,23 @@ final class ContentValidatorTest {
         void apply(ContentBuilder builder);
     }
 
+    @Test
+    void rejectsSlimeWhoseFavoriteFoodIsNotClaimedByAnyFood() {
+        assertThrows(ConfigValidationException.class, () -> this.validator.validate(content(builder ->
+                builder.slimes.put("slime_rock", new SlimeDef(
+                        "slime_rock", "Rock Slime", Material.SLIME_BALL, Material.BLAZE_POWDER,
+                        "common", 1, 10, 15, 2))
+        )));
+    }
+
+    @Test
+    void rejectsMaterialClaimedByTwoFoods() {
+        assertThrows(ConfigValidationException.class, () -> this.validator.validate(content(builder ->
+                builder.foods.put("food_other", new FoodDef("food_other", "Other", "vegetable",
+                        List.of(Material.CARROT_ITEM)))
+        )));
+    }
+
     private static final class ContentBuilder {
         private final Map<String, SlimeDef> slimes = new LinkedHashMap<>();
         private final Map<String, LocationDef> locations = new LinkedHashMap<>();
@@ -149,7 +166,8 @@ final class ContentValidatorTest {
                     15,
                     2
             ));
-            this.foods.put("food_meadow_carrot", new FoodDef("food_meadow_carrot", "Meadow Carrot", "vegetable"));
+            this.foods.put("food_meadow_carrot", new FoodDef("food_meadow_carrot", "Meadow Carrot", "vegetable",
+                    List.of(Material.CARROT_ITEM)));
             this.plants.put("plant_meadow_carrot", new PlantDef(
                     "plant_meadow_carrot",
                     "Meadow Carrot",

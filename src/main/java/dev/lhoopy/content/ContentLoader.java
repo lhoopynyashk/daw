@@ -8,6 +8,8 @@ import org.bukkit.configuration.ConfigurationSection;
 import org.bukkit.configuration.file.YamlConfiguration;
 
 import java.io.File;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.LinkedHashMap;
 import java.util.Locale;
 import java.util.Map;
@@ -153,7 +155,8 @@ public final class ContentLoader implements ConfigProvider<GameContent> {
             definitions.put(normalizedId, new FoodDef(
                     normalizedId,
                     food.getString("display-name", id),
-                    normalize(food.getString("type", "generic"))
+                    normalize(food.getString("type", "generic")),
+                    readMaterials(food, normalizedId)
             ));
         }
         return definitions;
@@ -276,6 +279,19 @@ public final class ContentLoader implements ConfigProvider<GameContent> {
             ));
         }
         return definitions;
+    }
+
+    private static List<Material> readMaterials(ConfigurationSection food, String foodId) {
+        List<Material> materials = new ArrayList<>();
+        for (String raw : food.getStringList("materials")) {
+            Material material = Material.matchMaterial(raw.trim().toUpperCase(Locale.ROOT));
+            if (material == null) {
+                throw new ConfigValidationException(
+                        "Food '" + foodId + "' has unknown material: " + raw);
+            }
+            materials.add(material);
+        }
+        return materials;
     }
 
     private YamlConfiguration loadConfig(String fileName) {
