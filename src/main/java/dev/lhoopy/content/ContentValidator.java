@@ -1,6 +1,7 @@
 package dev.lhoopy.content;
 
 import dev.lhoopy.core.config.ConfigValidationException;
+import org.bukkit.Material;
 
 import java.util.HashMap;
 import java.util.HashSet;
@@ -18,9 +19,9 @@ public final class ContentValidator {
         requireNotEmpty(content.getResources(), "resources");
         requireNotEmpty(content.getPens(), "pens");
 
-        Map<org.bukkit.Material, String> materialOwners = new HashMap<>();
+        Map<Material, String> materialOwners = new HashMap<>();
         for (FoodDef food : content.getFoods().values()) {
-            for (org.bukkit.Material material : food.getMaterials()) {
+            for (Material material : food.getMaterials()) {
                 String previous = materialOwners.put(material, food.getId());
                 if (previous != null) {
                     throw new ConfigValidationException("Material " + material

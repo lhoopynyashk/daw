@@ -8,9 +8,6 @@ import dev.lhoopy.profile.PlayerProfile;
 import dev.lhoopy.storage.VacpackLimits;
 import org.bukkit.Material;
 
-import java.util.HashMap;
-import java.util.Map;
-
 /**
  * Кормление слайма в загоне едой из хранилища (команда /penfeed).
  * Кормление предметом в руке живёт в PenFeedingService.

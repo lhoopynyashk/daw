@@ -1,6 +1,7 @@
 package dev.lhoopy.content;
 
 import dev.lhoopy.core.config.ConfigProvider;
+import org.bukkit.Material;
 
 import java.util.Collection;
 import java.util.Collections;
@@ -13,7 +14,7 @@ public final class ContentRegistry {
     private final Map<String, SlimeDef> slimes = new LinkedHashMap<>();
     private final Map<String, LocationDef> locations = new LinkedHashMap<>();
     private final Map<String, FoodDef> foods = new LinkedHashMap<>();
-    private final Map<org.bukkit.Material, FoodDef> foodsByMaterial = new LinkedHashMap<>();
+    private final Map<Material, FoodDef> foodsByMaterial = new LinkedHashMap<>();
     private final Map<String, PlantDef> plants = new LinkedHashMap<>();
     private final Map<String, PlantDef> plantsBySeed = new LinkedHashMap<>();
     private final Map<String, PlortDef> plorts = new LinkedHashMap<>();
@@ -41,7 +42,7 @@ public final class ContentRegistry {
         this.locations.putAll(content.getLocations());
         this.foods.putAll(content.getFoods());
         for (FoodDef food : content.getFoods().values()) {
-            for (org.bukkit.Material material : food.getMaterials()) {
+            for (Material material : food.getMaterials()) {
                 this.foodsByMaterial.put(material, food);
             }
         }
@@ -96,7 +97,7 @@ public final class ContentRegistry {
      * а не таблицей в коде: иначе новый слайм с новой favorite-food молча
      * перестаёт кормиться.
      */
-    public FoodDef getFoodByMaterial(org.bukkit.Material material) {
+    public FoodDef getFoodByMaterial(Material material) {
         return material == null ? null : this.foodsByMaterial.get(material);
     }
 
