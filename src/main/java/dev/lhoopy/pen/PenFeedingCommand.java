@@ -9,11 +9,11 @@ import org.bukkit.entity.Player;
 
 public final class PenFeedingCommand {
     private final ProfileService profileService;
-    private final SlimeFeedingService feedingService;
+    private final PenStorageFeedingService feedingService;
 
     public PenFeedingCommand(ContentRegistry contentRegistry, ProfileService profileService, long fedDurationMillis) {
         this.profileService = profileService;
-        this.feedingService = new SlimeFeedingService(contentRegistry, fedDurationMillis);
+        this.feedingService = new PenStorageFeedingService(contentRegistry, fedDurationMillis);
     }
 
     public void handle(CommandSender sender, String[] args) {
@@ -60,7 +60,7 @@ public final class PenFeedingCommand {
         String lastError = null;
         long now = System.currentTimeMillis();
         for (PenSlime slime : profile.getPenSlimes()) {
-            SlimeFeedingService.FeedResult result = this.feedingService.feed(profile, slime, now);
+            PenStorageFeedingService.FeedResult result = this.feedingService.feed(profile, slime, now);
             if (result.isSuccess()) {
                 fed++;
             } else {
@@ -76,7 +76,7 @@ public final class PenFeedingCommand {
     }
 
     private void feedOne(Player player, PlayerProfile profile, PenSlime slime) {
-        SlimeFeedingService.FeedResult result = this.feedingService.feed(profile, slime, System.currentTimeMillis());
+        PenStorageFeedingService.FeedResult result = this.feedingService.feed(profile, slime, System.currentTimeMillis());
         if (!result.isSuccess()) {
             player.sendMessage(ChatColor.RED + result.getMessage());
             return;

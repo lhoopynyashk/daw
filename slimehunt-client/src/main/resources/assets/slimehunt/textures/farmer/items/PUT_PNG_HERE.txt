@@ -1,1 +1,0 @@
-Put resource and plort PNG files here. The file name must match the item ID from resources.yml or plorts.yml.

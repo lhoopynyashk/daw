@@ -10,11 +10,15 @@ import org.bukkit.Material;
 import java.util.HashMap;
 import java.util.Map;
 
-public final class SlimeFeedingService {
+/**
+ * Кормление слайма в загоне едой из хранилища (команда /penfeed).
+ * Кормление предметом в руке живёт в PenFeedingService.
+ */
+public final class PenStorageFeedingService {
     private final ContentRegistry contentRegistry;
     private final long fedDurationMillis;
 
-    public SlimeFeedingService(ContentRegistry contentRegistry, long fedDurationMillis) {
+    public PenStorageFeedingService(ContentRegistry contentRegistry, long fedDurationMillis) {
         this.contentRegistry = contentRegistry;
         this.fedDurationMillis = Math.max(1L, fedDurationMillis);
     }
