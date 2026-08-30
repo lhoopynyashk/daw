@@ -92,11 +92,6 @@ public final class ContentRegistry {
         return this.foods.get(normalize(id));
     }
 
-    /**
-     * Еда, соответствующая предмету. Связь задаётся ключом materials в foods.yml,
-     * а не таблицей в коде: иначе новый слайм с новой favorite-food молча
-     * перестаёт кормиться.
-     */
     public FoodDef getFoodByMaterial(Material material) {
         return material == null ? null : this.foodsByMaterial.get(material);
     }

@@ -1,16 +1,15 @@
 package dev.lhoopy.pen;
 
+import dev.lhoopy.content.ContentIds;
 import dev.lhoopy.content.ContentRegistry;
 import dev.lhoopy.content.FoodDef;
-import dev.lhoopy.content.ContentIds;
 import dev.lhoopy.content.SlimeDef;
 import dev.lhoopy.profile.PlayerProfile;
 import dev.lhoopy.storage.VacpackLimits;
 import org.bukkit.Material;
 
 /**
- * Кормление слайма в загоне едой из хранилища (команда /penfeed).
- * Кормление предметом в руке живёт в PenFeedingService.
+ * Кормление из хранилища (/penfeed). Предметом в руке — PenFeedingService.
  */
 public final class PenStorageFeedingService {
     private final ContentRegistry contentRegistry;

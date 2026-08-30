@@ -1,6 +1,4 @@
-# materials — игровые предметы, которые считаются этой едой.
-# Связь нужна, чтобы кормление из хранилища нашло еду по favorite-food слайма.
-# Каждый favorite-food из slimes.yml обязан встречаться ровно один раз — это проверяет ContentValidator.
+# materials — предметы, которые считаются этой едой.
 foods:
   plant_sweetroot: { display-name: "Сладкорост", type: vegetable, materials: [APPLE, BREAD] }
   plant_meadow_carrot: { display-name: "Луговая морковь", type: vegetable, materials: [CARROT_ITEM, POTATO_ITEM] }

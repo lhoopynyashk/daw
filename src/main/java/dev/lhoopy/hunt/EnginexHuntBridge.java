@@ -37,7 +37,6 @@ public final class EnginexHuntBridge implements Listener {
     private static final int TOTAL_ROUNDS = 9;
     private static final int REQUIRED_HITS = 6;
     private static final int ROUND_TIMEOUT_MS = 1200;
-    /** Фон экрана загрузки по умолчанию. Переопределяется ключом loading.art-url в config.yml. */
     private static final String DEFAULT_LOADING_ART_URL =
             "https://raw.githubusercontent.com/makaroon1977-code/dsad/c03395326dc6f80ffaaf6cceb29598daa8f9688e/SlimeRancher-Keyart_Wishlist-Landscape-2560x1440-b2f7b22e6d19dff415daf5dbe4d8e78c%20(1).jpg";
     private static final long LOAD_RETRY_TICKS = 40L;
@@ -349,10 +348,6 @@ public final class EnginexHuntBridge implements Listener {
                 .send(LOADING_OPEN_CHANNEL, player);
     }
 
-    /**
-     * Картинка экрана загрузки лежит не в бандле, а на URL из конфига:
-     * бандл легче на 160 КБ, а арт можно поменять без пересборки мода.
-     */
     private String loadingArtUrl() {
         return this.plugin.getConfig().getString("loading.art-url", DEFAULT_LOADING_ART_URL);
     }

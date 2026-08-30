@@ -13,6 +13,23 @@ import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
 final class ContentValidatorTest {
+    @Test
+    void rejectsSlimeWhoseFavoriteFoodIsNotClaimedByAnyFood() {
+        assertThrows(ConfigValidationException.class, () -> this.validator.validate(content(builder ->
+                builder.slimes.put("slime_rock", new SlimeDef(
+                        "slime_rock", "Rock Slime", Material.SLIME_BALL, Material.BLAZE_POWDER,
+                        "common", 1, 10, 15, 2))
+        )));
+    }
+
+    @Test
+    void rejectsMaterialClaimedByTwoFoods() {
+        assertThrows(ConfigValidationException.class, () -> this.validator.validate(content(builder ->
+                builder.foods.put("food_other", new FoodDef("food_other", "Other", "vegetable",
+                        List.of(Material.CARROT_ITEM)))
+        )));
+    }
+
     private final ContentValidator validator = new ContentValidator();
 
     @Test
@@ -125,23 +142,6 @@ final class ContentValidatorTest {
 
     private interface ContentMutation {
         void apply(ContentBuilder builder);
-    }
-
-    @Test
-    void rejectsSlimeWhoseFavoriteFoodIsNotClaimedByAnyFood() {
-        assertThrows(ConfigValidationException.class, () -> this.validator.validate(content(builder ->
-                builder.slimes.put("slime_rock", new SlimeDef(
-                        "slime_rock", "Rock Slime", Material.SLIME_BALL, Material.BLAZE_POWDER,
-                        "common", 1, 10, 15, 2))
-        )));
-    }
-
-    @Test
-    void rejectsMaterialClaimedByTwoFoods() {
-        assertThrows(ConfigValidationException.class, () -> this.validator.validate(content(builder ->
-                builder.foods.put("food_other", new FoodDef("food_other", "Other", "vegetable",
-                        List.of(Material.CARROT_ITEM)))
-        )));
     }
 
     private static final class ContentBuilder {

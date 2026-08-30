@@ -20,7 +20,6 @@ public final class FoodDef {
                 : Collections.unmodifiableList(materials);
     }
 
-    /** Предметы, которые считаются этой едой при кормлении из хранилища. */
     public List<Material> getMaterials() {
         return this.materials;
     }
