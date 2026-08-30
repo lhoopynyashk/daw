@@ -1,0 +1,178 @@
+styles:
+  pen_basic:
+    name: "Обычный загон"
+    rarity: basic
+    description: "Базовый загон без дополнительных эффектов."
+    chance: 0
+
+  pen_production:
+    name: "Производственный загон"
+    rarity: common
+    description: "+10% к скорости производства плортов."
+    chance: 12
+    effects: { production-multiplier: 1.10 }
+  pen_satiated:
+    name: "Сытый загон"
+    rarity: common
+    description: "Слаймы расходуют на 10% меньше еды."
+    chance: 10
+    effects: { food-use-multiplier: 0.90 }
+  pen_spacious:
+    name: "Просторный загон"
+    rarity: common
+    description: "+2 места для слаймов."
+    chance: 9
+    effects: { capacity-bonus: 2 }
+  pen_trading:
+    name: "Торговый загон"
+    rarity: common
+    description: "+8% к цене продажи плортов."
+    chance: 8
+    effects: { sell-multiplier: 1.08 }
+  pen_collection:
+    name: "Сборочный загон"
+    rarity: common
+    description: "Автоматически собирает плорты в накопитель."
+    chance: 5
+    effects: { automatic-collection: true }
+  pen_stable:
+    name: "Стабильный загон"
+    rarity: common
+    description: "+10% к шансу дополнительного плорта."
+    chance: 4
+    effects: { extra-plort-chance: 0.10 }
+
+  pen_water:
+    name: "Водный загон"
+    rarity: rare
+    description: "Водные слаймы производят плорты на 25% быстрее."
+    chance: 4.5
+  pen_nature:
+    name: "Природный загон"
+    rarity: rare
+    description: "Природные слаймы производят плорты на 25% быстрее."
+    chance: 4.5
+  pen_mountain:
+    name: "Горный загон"
+    rarity: rare
+    description: "Горные слаймы производят плорты на 25% быстрее."
+    chance: 4.5
+  pen_fire:
+    name: "Огненный загон"
+    rarity: rare
+    description: "Огненные слаймы производят плорты на 25% быстрее."
+    chance: 4.5
+  pen_resource:
+    name: "Ресурсный загон"
+    rarity: rare
+    description: "Ресурсные слаймы дают на 20% больше плортов."
+    chance: 4
+  pen_auto_collection:
+    name: "Автосборочный загон"
+    rarity: rare
+    description: "Автосбор и +10% к скорости производства."
+    chance: 3
+    effects: { automatic-collection: true, production-multiplier: 1.10 }
+  pen_honey:
+    name: "Медовый загон"
+    rarity: rare
+    description: "+20% к цене продажи плортов."
+    chance: 2
+    effects: { sell-multiplier: 1.20 }
+
+  pen_accelerated:
+    name: "Ускоренный загон"
+    rarity: epic
+    description: "+35% к скорости производства."
+    chance: 4
+    effects: { production-multiplier: 1.35 }
+  pen_economical:
+    name: "Экономный загон"
+    rarity: epic
+    description: "Слаймы расходуют на 25% меньше еды."
+    chance: 3
+    effects: { food-use-multiplier: 0.75 }
+  pen_crystal:
+    name: "Кристальный загон"
+    rarity: epic
+    description: "+20% к шансу дополнительного плорта."
+    chance: 3
+    effects: { extra-plort-chance: 0.20 }
+  pen_hybrid:
+    name: "Гибридный загон"
+    rarity: epic
+    description: "Гибридные слаймы производят плорты на 40% быстрее."
+    chance: 2.5
+  pen_rich:
+    name: "Богатый загон"
+    rarity: epic
+    description: "+30% к цене продажи плортов."
+    chance: 2
+    effects: { sell-multiplier: 1.30 }
+  pen_large:
+    name: "Большой загон"
+    rarity: epic
+    description: "+5 мест для слаймов."
+    chance: 1.5
+    effects: { capacity-bonus: 5 }
+
+  pen_rainbow:
+    name: "Радужный загон"
+    rarity: legendary
+    description: "+45% к скорости производства всех слаймов."
+    chance: 2
+    effects: { production-multiplier: 1.45 }
+  pen_diamond:
+    name: "Алмазный загон"
+    rarity: legendary
+    description: "+30% к шансу дополнительного плорта."
+    chance: 1.5
+    effects: { extra-plort-chance: 0.30 }
+  pen_royal:
+    name: "Королевский загон"
+    rarity: legendary
+    description: "+50% к цене продажи плортов."
+    chance: 1.2
+    effects: { sell-multiplier: 1.50 }
+  pen_combination:
+    name: "Комбинированный загон"
+    rarity: legendary
+    description: "+25% к производству и цене продажи."
+    chance: 1
+    effects: { production-multiplier: 1.25, sell-multiplier: 1.25 }
+  pen_synergy:
+    name: "Синергетический загон"
+    rarity: legendary
+    description: "+2% к производству за такой загон, максимум +20%."
+    chance: 0.8
+    effects: { production-multiplier: 1.02 }
+  pen_sky:
+    name: "Небесный загон"
+    rarity: legendary
+    description: "Особые слаймы производят плорты на 60% быстрее."
+    chance: 0.5
+
+  pen_infinite:
+    name: "Бесконечный загон"
+    rarity: mythic
+    description: "+8 мест, автосбор и +25% к производству."
+    chance: 0.7
+    effects: { capacity-bonus: 8, automatic-collection: true, production-multiplier: 1.25 }
+  pen_absolute:
+    name: "Абсолютный загон"
+    rarity: mythic
+    description: "+40% к производству и продаже, +20% шанс доп. плорта."
+    chance: 0.6
+    effects: { production-multiplier: 1.40, sell-multiplier: 1.40, extra-plort-chance: 0.20 }
+  pen_reactor:
+    name: "Слайм-реактор"
+    rarity: mythic
+    description: "Периодически создаёт бонусный подходящий плорт."
+    chance: 0.4
+    effects: { extra-plort-chance: 0.25 }
+  pen_imperial:
+    name: "Императорский загон"
+    rarity: mythic
+    description: "+75% к цене продажи плортов этого загона."
+    chance: 0.3
+    effects: { sell-multiplier: 1.75 }

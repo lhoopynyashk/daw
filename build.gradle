@@ -1,0 +1,100 @@
+plugins {
+    id 'java-library'
+}
+
+group = 'dev.lhoopy'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+    maven {
+        url = 'https://repo.c7x.dev/repository/maven-public/'
+        credentials {
+            username = findProperty('c7xUsername') ?: System.getenv('C7X_USERNAME')
+            password = findProperty('c7xPassword') ?: System.getenv('C7X_PASSWORD')
+        }
+    }
+}
+
+dependencies {
+    compileOnly 'gg.cristalix:diamondpaper:1.4.11'
+    compileOnly 'ru.cristalix.core:bukkit-api:1.15.9'
+    implementation 'gg.cristalix:wada:4.17.0'
+
+    testImplementation 'gg.cristalix:diamondpaper:1.4.11'
+    testImplementation platform('org.junit:junit-bom:5.10.0')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+}
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(25)
+    }
+}
+
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = 'UTF-8'
+}
+
+jar {
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+    from {
+        configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) }
+    }
+}
+
+test {
+    useJUnitPlatform()
+}
+
+// --- деплой на сервер -----------------------------------------------------
+// Переопределяется в gradle.properties или через -PdeployHost=...
+// Авторизация — штатная для scp (ssh-ключ либо запрос пароля),
+// никаких доступов в репозитории не хранится.
+def deployUser = findProperty('deployUser') ?: 'lhoopynyashka148'
+def deployHost = findProperty('deployHost') ?: 'mokou.dedi.c7x.dev'
+def deployRoot = findProperty('deployRoot') ?: '/home/lhoopynyashka148/slimes-server'
+def deployTarget = "${deployUser}@${deployHost}"
+
+tasks.register('deployPlugin', Exec) {
+    group = 'deploy'
+    description = 'scp server plugin -> plugins/'
+    dependsOn tasks.named('jar')
+    def source = tasks.named('jar').flatMap { it.archiveFile }
+    doFirst {
+        commandLine 'scp', source.get().asFile.absolutePath,
+                "${deployTarget}:${deployRoot}/plugins/slimes-1.0-SNAPSHOT.jar"
+    }
+}
+
+tasks.register('deployClient', Exec) {
+    group = 'deploy'
+    description = 'scp client mod -> plugins/Slimes/'
+    dependsOn ':slimehunt-client:bundle'
+    def bundle = file('slimehunt-client/build/libs/SlimeHunt-bundle.jar')
+    doFirst {
+        if (!bundle.isFile()) {
+            throw new GradleException("Bundle not found: ${bundle}")
+        }
+        long limit = 1024 * 1024
+        if (bundle.length() > limit) {
+            throw new GradleException(
+                    "Bundle is ${bundle.length()} bytes, over the 1 MB WADA limit: it will not be delivered")
+        }
+        commandLine 'scp', bundle.absolutePath,
+                "${deployTarget}:${deployRoot}/plugins/Slimes/SlimeHunt-bundle.jar"
+    }
+}
+
+tasks.register('deploy') {
+    group = 'deploy'
+    description = 'build + scp both artifacts (server restart required afterwards)'
+    dependsOn 'test', 'deployPlugin', 'deployClient'
+    doLast {
+        println ''
+        println "Uploaded to ${deployTarget}:${deployRoot}"
+        println 'RESTART THE SERVER: the client bundle is cached in memory,'
+        println 'otherwise players keep the old client mod.'
+    }
+}

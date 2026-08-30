@@ -1,0 +1,32 @@
+foods:
+  plant_sweetroot: { display-name: "Сладкорост", type: vegetable }
+  plant_meadow_carrot: { display-name: "Луговая морковь", type: vegetable }
+  plant_sun_berry: { display-name: "Солнечная ягода", type: fruit }
+  plant_blackberry_bush: { display-name: "Ежевичный куст", type: fruit }
+  plant_honeyflower: { display-name: "Медоцвет", type: sweet }
+  plant_spicy_pumpkin: { display-name: "Пряная тыква", type: vegetable }
+  plant_sea_kale: { display-name: "Морская капуста", type: water }
+  plant_blue_algae: { display-name: "Синяя водоросль", type: water }
+  plant_lily_leaf: { display-name: "Лист кувшинки", type: water }
+  plant_coral_sprout: { display-name: "Коралловый росток", type: water }
+  plant_swamp_duckweed: { display-name: "Болотная ряска", type: water }
+  plant_spring_lotus: { display-name: "Родниковый лотос", type: water }
+  plant_bright_mushroom: { display-name: "Светлый гриб", type: mushroom }
+  plant_night_cap: { display-name: "Ночная шляпка", type: mushroom }
+  plant_mist_mushroom: { display-name: "Туманный гриб", type: mushroom }
+  plant_cave_spore: { display-name: "Пещерная спора", type: mushroom }
+  plant_lunar_mycelium: { display-name: "Лунный мицелий", type: mushroom }
+  plant_ash_root: { display-name: "Пепельный корень", type: hot }
+  plant_hot_pepper: { display-name: "Жгучий перец", type: hot }
+  plant_magma_vine: { display-name: "Магмовая лоза", type: hot }
+  plant_smoke_tobacco: { display-name: "Дымный табак", type: hot }
+  plant_obsidian_cactus: { display-name: "Обсидиановый кактус", type: hot }
+  plant_stone_tuber: { display-name: "Каменный клубень", type: crystal }
+  plant_sulfur_turnip: { display-name: "Серная репа", type: crystal }
+  plant_crystal_vine: { display-name: "Кристальная лоза", type: crystal }
+  plant_golden_saffron: { display-name: "Золотой шафран", type: crystal }
+  plant_amethyst_berry: { display-name: "Аметистовая ягода", type: crystal }
+  plant_cloud_sprout: { display-name: "Облачный росток", type: sky }
+  plant_storm_mint: { display-name: "Грозовая мята", type: sky }
+  plant_firefly_grass: { display-name: "Светлячковая трава", type: sky }
+  plant_rainbow_fruit: { display-name: "Радужный плод", type: sky }

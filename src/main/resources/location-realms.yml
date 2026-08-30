@@ -1,0 +1,679 @@
+enabled: true
+realm-type: THUT
+max-players: 25
+
+npc:
+  enabled: true
+  name: "§bВыбор локации"
+  x: 12.5
+  y: 91.0
+  z: 0.5
+  yaw: 270.0
+
+platform:
+  build-fallback: true
+  y: 90
+  radius: 24
+
+# Один сервер запускается на каждый realm-id: THUT-1 ... THUT-6.
+# Когда появятся готовые карты, выключи platform.build-fallback и сохрани те же координаты узлов.
+slimes:
+  enabled: true
+  respawn-seconds: 45
+  spawn-points:
+    - { x: -16, y: 90, z: 16 }
+    - { x: -9, y: 90, z: 15 }
+    - { x: -3, y: 90, z: 17 }
+    - { x: 4, y: 90, z: 16 }
+    - { x: 10, y: 90, z: 14 }
+    - { x: 16, y: 90, z: 17 }
+
+locations:
+  loc_azure_cliffs:
+    realm-id: 1
+    icon: PRISMARINE
+    resource-nodes:
+      meadow_fiber:
+        resource-id: res_meadow_fiber
+        x: -18
+        y: 90
+        z: -12
+        material: LEAVES
+      soft_soil:
+        resource-id: res_soft_soil
+        x: -12
+        y: 90
+        z: -12
+        material: DIRT
+      water_drop:
+        resource-id: res_water_drop
+        x: -6
+        y: 90
+        z: -12
+        material: LAPIS_BLOCK
+      algae_fiber:
+        resource-id: res_algae_fiber
+        x: 0
+        y: 90
+        z: -12
+        material: MOSSY_COBBLESTONE
+      sandy_salt:
+        resource-id: res_sandy_salt
+        x: 6
+        y: 90
+        z: -12
+        material: SANDSTONE
+      flower_pollen:
+        resource-id: res_flower_pollen
+        x: 12
+        y: 90
+        z: -12
+        material: HAY_BLOCK
+      bright_spores:
+        resource-id: res_bright_spores
+        x: 18
+        y: 90
+        z: -12
+        material: GLOWSTONE
+        respawn-seconds: 120
+      meadow_root:
+        resource-id: res_meadow_root
+        x: -18
+        y: 90
+        z: -6
+        material: LOG
+      sun_pollen:
+        resource-id: res_sun_pollen
+        x: -12
+        y: 90
+        z: -6
+        material: GOLD_BLOCK
+      lake_leaf:
+        resource-id: res_lake_leaf
+        x: -6
+        y: 90
+        z: -6
+        material: LEAVES
+      waterfall_drop:
+        resource-id: res_waterfall_drop
+        x: 6
+        y: 90
+        z: -6
+        material: SEA_LANTERN
+      coral_dust:
+        resource-id: res_coral_dust
+        x: 12
+        y: 90
+        z: -6
+        material: PRISMARINE
+      sea_salt:
+        resource-id: res_sea_salt
+        x: 18
+        y: 90
+        z: -6
+        material: QUARTZ_BLOCK
+      soft_soil_south:
+        resource-id: res_soft_soil
+        x: -15
+        y: 90
+        z: 6
+        material: DIRT
+      water_drop_south:
+        resource-id: res_water_drop
+        x: -9
+        y: 90
+        z: 6
+        material: LAPIS_BLOCK
+      sandy_salt_south:
+        resource-id: res_sandy_salt
+        x: -3
+        y: 90
+        z: 6
+        material: SANDSTONE
+      flower_pollen_south:
+        resource-id: res_flower_pollen
+        x: 3
+        y: 90
+        z: 6
+        material: HAY_BLOCK
+      meadow_root_south:
+        resource-id: res_meadow_root
+        x: 9
+        y: 90
+        z: 6
+        material: LOG
+      coral_dust_south:
+        resource-id: res_coral_dust
+        x: 15
+        y: 90
+        z: 6
+        material: PRISMARINE
+
+  loc_northern_cascades:
+    realm-id: 2
+    icon: PACKED_ICE
+    resource-nodes:
+      spring_drop:
+        resource-id: res_spring_drop
+        x: -15
+        y: 90
+        z: -10
+        material: SEA_LANTERN
+        respawn-seconds: 120
+      warm_mineral:
+        resource-id: res_warm_mineral
+        x: -9
+        y: 90
+        z: -10
+        material: MAGMA
+        respawn-seconds: 120
+      mist_essence:
+        resource-id: res_mist_essence
+        x: -3
+        y: 90
+        z: -10
+        material: GLASS
+        respawn-seconds: 120
+      stone_dust:
+        resource-id: res_stone_dust
+        x: 3
+        y: 90
+        z: -10
+        material: STONE
+      mountain_salt:
+        resource-id: res_mountain_salt
+        x: 9
+        y: 90
+        z: -10
+        material: QUARTZ_BLOCK
+      crystal_shard:
+        resource-id: res_crystal_shard
+        x: 15
+        y: 90
+        z: -10
+        material: DIAMOND_BLOCK
+        respawn-seconds: 120
+      spring_drop_south:
+        resource-id: res_spring_drop
+        x: -15
+        y: 90
+        z: 6
+        material: SEA_LANTERN
+        respawn-seconds: 120
+      warm_mineral_south:
+        resource-id: res_warm_mineral
+        x: -9
+        y: 90
+        z: 6
+        material: MAGMA
+        respawn-seconds: 120
+      mist_essence_south:
+        resource-id: res_mist_essence
+        x: -3
+        y: 90
+        z: 6
+        material: GLASS
+        respawn-seconds: 120
+      stone_dust_south:
+        resource-id: res_stone_dust
+        x: 3
+        y: 90
+        z: 6
+        material: STONE
+      mountain_salt_south:
+        resource-id: res_mountain_salt
+        x: 9
+        y: 90
+        z: 6
+        material: QUARTZ_BLOCK
+      crystal_shard_south:
+        resource-id: res_crystal_shard
+        x: 15
+        y: 90
+        z: 6
+        material: DIAMOND_BLOCK
+        respawn-seconds: 120
+
+  loc_darkwood:
+    realm-id: 3
+    icon: LOG
+    resource-nodes:
+      forest_branch:
+        resource-id: res_forest_branch
+        x: -18
+        y: 90
+        z: -12
+        material: LOG
+      wild_berry:
+        resource-id: res_wild_berry
+        x: -12
+        y: 90
+        z: -12
+        material: LEAVES
+      flower_nectar:
+        resource-id: res_flower_nectar
+        x: -6
+        y: 90
+        z: -12
+        material: HAY_BLOCK
+      strange_seed:
+        resource-id: res_strange_seed
+        x: 0
+        y: 90
+        z: -12
+        material: MELON_BLOCK
+      swamp_sludge:
+        resource-id: res_swamp_sludge
+        x: 6
+        y: 90
+        z: -12
+        material: SOUL_SAND
+      dark_water:
+        resource-id: res_dark_water
+        x: 12
+        y: 90
+        z: -12
+        material: LAPIS_BLOCK
+      mycelium:
+        resource-id: res_mycelium
+        x: 18
+        y: 90
+        z: -12
+        material: MYCEL
+      dark_pollen:
+        resource-id: res_dark_pollen
+        x: -15
+        y: 90
+        z: -6
+        material: COAL_BLOCK
+      lunar_dew:
+        resource-id: res_lunar_dew
+        x: -5
+        y: 90
+        z: -6
+        material: SEA_LANTERN
+        respawn-seconds: 120
+      wet_mycelium:
+        resource-id: res_wet_mycelium
+        x: 5
+        y: 90
+        z: -6
+        material: MOSSY_COBBLESTONE
+        respawn-seconds: 120
+      black_spore:
+        resource-id: res_black_spore
+        x: 15
+        y: 90
+        z: -6
+        material: OBSIDIAN
+        respawn-seconds: 180
+      toxic_essence:
+        resource-id: res_toxic_essence
+        x: -15
+        y: 90
+        z: 6
+        material: EMERALD_BLOCK
+        respawn-seconds: 180
+      flower_nectar_south:
+        resource-id: res_flower_nectar
+        x: -9
+        y: 90
+        z: 6
+        material: HAY_BLOCK
+      swamp_sludge_south:
+        resource-id: res_swamp_sludge
+        x: -3
+        y: 90
+        z: 6
+        material: SOUL_SAND
+      dark_water_south:
+        resource-id: res_dark_water
+        x: 3
+        y: 90
+        z: 6
+        material: LAPIS_BLOCK
+      lunar_dew_south:
+        resource-id: res_lunar_dew
+        x: 9
+        y: 90
+        z: 6
+        material: SEA_LANTERN
+        respawn-seconds: 120
+      black_spore_south:
+        resource-id: res_black_spore
+        x: 15
+        y: 90
+        z: 6
+        material: OBSIDIAN
+        respawn-seconds: 180
+
+  loc_ash_sands:
+    realm-id: 4
+    icon: MAGMA
+    resource-nodes:
+      ash:
+        resource-id: res_ash
+        x: -18
+        y: 90
+        z: -12
+        material: GRAVEL
+      dry_root:
+        resource-id: res_dry_root
+        x: -12
+        y: 90
+        z: -12
+        material: LOG
+      ash_dust:
+        resource-id: res_ash_dust
+        x: -6
+        y: 90
+        z: -12
+        material: CLAY
+      red_pepper:
+        resource-id: res_red_pepper
+        x: 0
+        y: 90
+        z: -12
+        material: REDSTONE_BLOCK
+      magma_shard:
+        resource-id: res_magma_shard
+        x: 6
+        y: 90
+        z: -12
+        material: MAGMA
+        respawn-seconds: 120
+      volcanic_soil:
+        resource-id: res_volcanic_soil
+        x: 12
+        y: 90
+        z: -12
+        material: SOUL_SAND
+        respawn-seconds: 120
+      volcanic_ash:
+        resource-id: res_volcanic_ash
+        x: 18
+        y: 90
+        z: -12
+        material: NETHERRACK
+      gray_grass:
+        resource-id: res_gray_grass
+        x: -15
+        y: 90
+        z: -6
+        material: MYCEL
+      magma_resin:
+        resource-id: res_magma_resin
+        x: -5
+        y: 90
+        z: -6
+        material: GLOWSTONE
+        respawn-seconds: 180
+      sulfur:
+        resource-id: res_sulfur
+        x: 5
+        y: 90
+        z: -6
+        material: GOLD_BLOCK
+      dry_soil:
+        resource-id: res_dry_soil
+        x: 15
+        y: 90
+        z: -6
+        material: DIRT
+      coal_dust:
+        resource-id: res_coal_dust
+        x: -15
+        y: 90
+        z: 6
+        material: COAL_BLOCK
+      ash_south:
+        resource-id: res_ash
+        x: -9
+        y: 90
+        z: 6
+        material: GRAVEL
+      magma_shard_south:
+        resource-id: res_magma_shard
+        x: -3
+        y: 90
+        z: 6
+        material: MAGMA
+        respawn-seconds: 120
+      volcanic_soil_south:
+        resource-id: res_volcanic_soil
+        x: 3
+        y: 90
+        z: 6
+        material: SOUL_SAND
+        respawn-seconds: 120
+      sulfur_south:
+        resource-id: res_sulfur
+        x: 9
+        y: 90
+        z: 6
+        material: GOLD_BLOCK
+      coal_dust_south:
+        resource-id: res_coal_dust
+        x: 15
+        y: 90
+        z: 6
+        material: COAL_BLOCK
+
+  loc_underheart:
+    realm-id: 5
+    icon: OBSIDIAN
+    resource-nodes:
+      cave_dust:
+        resource-id: res_cave_dust
+        x: -16
+        y: 90
+        z: -12
+        material: STONE
+      obsidian_crumb:
+        resource-id: res_obsidian_crumb
+        x: -12
+        y: 90
+        z: -12
+        material: OBSIDIAN
+        respawn-seconds: 180
+      golden_pollen:
+        resource-id: res_golden_pollen
+        x: -8
+        y: 90
+        z: -12
+        material: GOLD_BLOCK
+        respawn-seconds: 180
+      rare_mineral:
+        resource-id: res_rare_mineral
+        x: -4
+        y: 90
+        z: -12
+        material: EMERALD_BLOCK
+        respawn-seconds: 180
+      amethyst_shard:
+        resource-id: res_amethyst_shard
+        x: 4
+        y: 90
+        z: -12
+        material: PURPUR_BLOCK
+        respawn-seconds: 180
+      glowing_soil:
+        resource-id: res_glowing_soil
+        x: 8
+        y: 90
+        z: -12
+        material: GLOWSTONE
+      stone_dust:
+        resource-id: res_stone_dust
+        x: 12
+        y: 90
+        z: -12
+        material: STONE
+      mountain_salt:
+        resource-id: res_mountain_salt
+        x: 16
+        y: 90
+        z: -12
+        material: QUARTZ_BLOCK
+      crystal_shard:
+        resource-id: res_crystal_shard
+        x: 0
+        y: 90
+        z: -6
+        material: DIAMOND_BLOCK
+        respawn-seconds: 120
+      cave_dust_south:
+        resource-id: res_cave_dust
+        x: -15
+        y: 90
+        z: 6
+        material: STONE
+      obsidian_crumb_south:
+        resource-id: res_obsidian_crumb
+        x: -9
+        y: 90
+        z: 6
+        material: OBSIDIAN
+        respawn-seconds: 180
+      amethyst_shard_south:
+        resource-id: res_amethyst_shard
+        x: -3
+        y: 90
+        z: 6
+        material: PURPUR_BLOCK
+        respawn-seconds: 180
+      glowing_soil_south:
+        resource-id: res_glowing_soil
+        x: 3
+        y: 90
+        z: 6
+        material: GLOWSTONE
+      mountain_salt_south:
+        resource-id: res_mountain_salt
+        x: 9
+        y: 90
+        z: 6
+        material: QUARTZ_BLOCK
+      crystal_shard_south:
+        resource-id: res_crystal_shard
+        x: 15
+        y: 90
+        z: 6
+        material: DIAMOND_BLOCK
+        respawn-seconds: 120
+
+  loc_sky_edges:
+    realm-id: 6
+    icon: QUARTZ_BLOCK
+    resource-nodes:
+      moon_shard:
+        resource-id: res_moon_shard
+        x: -18
+        y: 90
+        z: -12
+        material: SEA_LANTERN
+        respawn-seconds: 180
+      cloud_fiber:
+        resource-id: res_cloud_fiber
+        x: -12
+        y: 90
+        z: -12
+        material: WOOL
+      light_dust:
+        resource-id: res_light_dust
+        x: -6
+        y: 90
+        z: -12
+        material: GLOWSTONE
+      storm_charge:
+        resource-id: res_storm_charge
+        x: 0
+        y: 90
+        z: -12
+        material: REDSTONE_BLOCK
+        respawn-seconds: 120
+      sky_grass:
+        resource-id: res_sky_grass
+        x: 6
+        y: 90
+        z: -12
+        material: GRASS
+      glowing_pollen:
+        resource-id: res_glowing_pollen
+        x: 12
+        y: 90
+        z: -12
+        material: GOLD_BLOCK
+      night_dew:
+        resource-id: res_night_dew
+        x: 18
+        y: 90
+        z: -12
+        material: LAPIS_BLOCK
+      rainbow_essence:
+        resource-id: res_rainbow_essence
+        x: -15
+        y: 90
+        z: -6
+        material: BEACON
+        respawn-seconds: 180
+      sky_shard:
+        resource-id: res_sky_shard
+        x: -5
+        y: 90
+        z: -6
+        material: QUARTZ_BLOCK
+        respawn-seconds: 120
+      spring_drop:
+        resource-id: res_spring_drop
+        x: 5
+        y: 90
+        z: -6
+        material: SEA_LANTERN
+        respawn-seconds: 120
+      lunar_dew:
+        resource-id: res_lunar_dew
+        x: 15
+        y: 90
+        z: -6
+        material: END_BRICKS
+        respawn-seconds: 120
+      cloud_fiber_south:
+        resource-id: res_cloud_fiber
+        x: -15
+        y: 90
+        z: 6
+        material: WOOL
+      light_dust_south:
+        resource-id: res_light_dust
+        x: -9
+        y: 90
+        z: 6
+        material: GLOWSTONE
+      storm_charge_south:
+        resource-id: res_storm_charge
+        x: -3
+        y: 90
+        z: 6
+        material: REDSTONE_BLOCK
+        respawn-seconds: 120
+      night_dew_south:
+        resource-id: res_night_dew
+        x: 3
+        y: 90
+        z: 6
+        material: LAPIS_BLOCK
+      rainbow_essence_south:
+        resource-id: res_rainbow_essence
+        x: 9
+        y: 90
+        z: 6
+        material: BEACON
+        respawn-seconds: 180
+      sky_shard_south:
+        resource-id: res_sky_shard
+        x: 15
+        y: 90
+        z: 6
+        material: QUARTZ_BLOCK
+        respawn-seconds: 120

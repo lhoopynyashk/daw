@@ -1,0 +1,5 @@
+pens:
+  pen_basic:
+    display-name: "Базовый загон"
+    base-capacity: 6
+    upgrade-price: 250

@@ -1,0 +1,177 @@
+locations:
+  loc_farm_hub:
+    display-name: "Основная Ферма"
+    tier: 0
+    normal-slimes:
+      - slime_pink
+    secret-slimes: []
+    resources:
+      - res_glass
+      - res_neutral_stabilizer
+    unlock-requirements: []
+    completion-reward: reward_farm_intro
+  loc_azure_cliffs:
+    display-name: "Лазурные скалы"
+    tier: 1
+    normal-slimes:
+      - slime_pink
+      - slime_coral
+      - slime_water
+      - slime_flower
+      - slime_mushroom
+      - slime_strawberry
+    secret-slimes:
+      - slime_lily_pad
+      - slime_nightmare
+    resources:
+      - res_meadow_fiber
+      - res_soft_soil
+      - res_water_drop
+      - res_algae_fiber
+      - res_sandy_salt
+      - res_flower_pollen
+      - res_bright_spores
+      - res_meadow_root
+      - res_sun_pollen
+      - res_lake_leaf
+      - res_waterfall_drop
+      - res_coral_dust
+      - res_sea_salt
+    unlock-requirements: []
+    completion-reward: reward_azure_cliffs_completion
+  loc_northern_cascades:
+    display-name: "Северные Каскады"
+    tier: 2
+    normal-slimes:
+      - slime_ice
+      - slime_snow
+      - slime_rocky
+      - slime_moss
+      - slime_geyser
+      - slime_crystal
+    secret-slimes:
+      - slime_mist
+      - slime_gold
+    resources:
+      - res_spring_drop
+      - res_warm_mineral
+      - res_mist_essence
+      - res_stone_dust
+      - res_mountain_salt
+      - res_crystal_shard
+    unlock-requirements:
+      - loc_azure_cliffs
+    completion-reward: reward_northern_cascades_completion
+  loc_darkwood:
+    display-name: "Тёмнолесье"
+    tier: 3
+    normal-slimes:
+      - slime_swamp
+      - slime_blackberry
+      - slime_honey
+      - slime_sleepy
+      - slime_cave
+      - slime_mist
+      - slime_mushroom
+    secret-slimes:
+      - slime_nightmare
+      - slime_mimic
+    resources:
+      - res_forest_branch
+      - res_wild_berry
+      - res_flower_nectar
+      - res_strange_seed
+      - res_swamp_sludge
+      - res_dark_water
+      - res_mycelium
+      - res_dark_pollen
+      - res_lunar_dew
+      - res_wet_mycelium
+      - res_black_spore
+      - res_toxic_essence
+    unlock-requirements:
+      - loc_northern_cascades
+    completion-reward: reward_darkwood_completion
+  loc_ash_sands:
+    display-name: "Пепельные Пески"
+    tier: 4
+    normal-slimes:
+      - slime_fire
+      - slime_lava
+      - slime_smoke
+      - slime_sulfur
+      - slime_coal
+      - slime_cactus
+    secret-slimes:
+      - slime_dynamite
+      - slime_obsidian
+    resources:
+      - res_ash
+      - res_dry_root
+      - res_ash_dust
+      - res_red_pepper
+      - res_magma_shard
+      - res_volcanic_soil
+      - res_volcanic_ash
+      - res_gray_grass
+      - res_magma_resin
+      - res_sulfur
+      - res_dry_soil
+      - res_coal_dust
+    unlock-requirements:
+      - loc_darkwood
+    completion-reward: reward_ash_sands_completion
+  loc_underheart:
+    display-name: "Сердце подземья"
+    tier: 5
+    normal-slimes:
+      - slime_cave
+      - slime_obsidian
+      - slime_radioactive
+      - slime_crystal
+      - slime_sulfur
+      - slime_amethyst
+    secret-slimes:
+      - slime_gold
+      - slime_money
+    resources:
+      - res_cave_dust
+      - res_obsidian_crumb
+      - res_golden_pollen
+      - res_rare_mineral
+      - res_amethyst_shard
+      - res_glowing_soil
+      - res_stone_dust
+      - res_mountain_salt
+      - res_crystal_shard
+    unlock-requirements:
+      - loc_ash_sands
+    completion-reward: reward_underheart_completion
+  loc_sky_edges:
+    display-name: "Небесные Края"
+    tier: 6
+    normal-slimes:
+      - slime_cloud
+      - slime_lightning
+      - slime_firefly
+      - slime_sleepy
+      - slime_cat
+      - slime_geyser
+    secret-slimes:
+      - slime_rainbow
+      - slime_money
+    resources:
+      - res_moon_shard
+      - res_cloud_fiber
+      - res_light_dust
+      - res_storm_charge
+      - res_sky_grass
+      - res_glowing_pollen
+      - res_night_dew
+      - res_rainbow_essence
+      - res_sky_shard
+      - res_spring_drop
+      - res_lunar_dew
+    unlock-requirements:
+      - loc_underheart
+    completion-reward: reward_sky_edges_completion

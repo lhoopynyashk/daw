@@ -1,0 +1,352 @@
+slimes:
+  slime_pink:
+    display-name: "Розовый слайм"
+    item-material: SLIME_BALL
+    favorite-food: APPLE
+    rarity: common
+    capture-difficulty: 1
+    sell-price: 15
+    interest-seconds: 35
+    size: 2
+  slime_ugly:
+    display-name: "Слайм-урод"
+    item-material: ROTTEN_FLESH
+    favorite-food: PUMPKIN
+    rarity: common
+    capture-difficulty: 2
+    sell-price: 18
+    interest-seconds: 32
+    size: 2
+  slime_water:
+    display-name: "Водный слайм"
+    item-material: WATER_BUCKET
+    favorite-food: RAW_FISH
+    rarity: common
+    capture-difficulty: 2
+    sell-price: 24
+    interest-seconds: 33
+    size: 2
+  slime_coral:
+    display-name: "Коралловый слайм"
+    item-material: PRISMARINE
+    favorite-food: RAW_FISH
+    rarity: common
+    capture-difficulty: 2
+    sell-price: 24
+    interest-seconds: 33
+    size: 2
+  slime_lily_pad:
+    display-name: "Кувшинка-слайм"
+    item-material: WATER_LILY
+    favorite-food: WATER_LILY
+    rarity: rare
+    capture-difficulty: 4
+    sell-price: 44
+    interest-seconds: 29
+    size: 2
+  slime_swamp:
+    display-name: "Болотный слайм"
+    item-material: CLAY_BALL
+    favorite-food: WATER_LILY
+    rarity: uncommon
+    capture-difficulty: 4
+    sell-price: 38
+    interest-seconds: 30
+    size: 2
+  slime_geyser:
+    display-name: "Гейзерный слайм"
+    item-material: PRISMARINE_CRYSTALS
+    favorite-food: RAW_FISH
+    rarity: rare
+    capture-difficulty: 5
+    sell-price: 52
+    interest-seconds: 27
+    size: 2
+  slime_ice:
+    display-name: "Ледяной слайм"
+    item-material: ICE
+    favorite-food: SNOW_BALL
+    rarity: uncommon
+    capture-difficulty: 3
+    sell-price: 34
+    interest-seconds: 31
+    size: 2
+  slime_snow:
+    display-name: "Снежный слайм"
+    item-material: SNOW_BALL
+    favorite-food: SNOW_BALL
+    rarity: uncommon
+    capture-difficulty: 3
+    sell-price: 36
+    interest-seconds: 31
+    size: 2
+  slime_rainbow:
+    display-name: "Радужный слайм"
+    item-material: NETHER_STAR
+    favorite-food: GOLDEN_APPLE
+    rarity: legendary
+    capture-difficulty: 10
+    sell-price: 180
+    interest-seconds: 16
+    size: 2
+  slime_moss:
+    display-name: "Моховой слайм"
+    item-material: MOSSY_COBBLESTONE
+    favorite-food: CARROT_ITEM
+    rarity: common
+    capture-difficulty: 3
+    sell-price: 28
+    interest-seconds: 32
+    size: 2
+  slime_strawberry:
+    display-name: "Земляничный слайм"
+    item-material: SPECKLED_MELON
+    favorite-food: APPLE
+    rarity: uncommon
+    capture-difficulty: 4
+    sell-price: 38
+    interest-seconds: 30
+    size: 2
+  slime_blackberry:
+    display-name: "Ежевичный слайм"
+    item-material: MELON
+    favorite-food: MELON
+    rarity: uncommon
+    capture-difficulty: 4
+    sell-price: 40
+    interest-seconds: 30
+    size: 2
+  slime_honey:
+    display-name: "Медовый слайм"
+    item-material: SUGAR
+    favorite-food: SUGAR
+    rarity: uncommon
+    capture-difficulty: 4
+    sell-price: 38
+    interest-seconds: 30
+    size: 2
+  slime_mushroom:
+    display-name: "Грибной слайм"
+    item-material: BROWN_MUSHROOM
+    favorite-food: BROWN_MUSHROOM
+    rarity: uncommon
+    capture-difficulty: 4
+    sell-price: 42
+    interest-seconds: 30
+    size: 2
+  slime_rocky:
+    display-name: "Каменистый слизень"
+    item-material: STONE
+    favorite-food: POTATO_ITEM
+    rarity: uncommon
+    capture-difficulty: 3
+    sell-price: 32
+    interest-seconds: 31
+    size: 3
+  slime_cave:
+    display-name: "Пещерный слайм"
+    item-material: COBBLESTONE
+    favorite-food: BROWN_MUSHROOM
+    rarity: uncommon
+    capture-difficulty: 5
+    sell-price: 48
+    interest-seconds: 28
+    size: 2
+  slime_sulfur:
+    display-name: "Серный слайм"
+    item-material: SULPHUR
+    favorite-food: CARROT_ITEM
+    rarity: rare
+    capture-difficulty: 6
+    sell-price: 62
+    interest-seconds: 25
+    size: 2
+  slime_coal:
+    display-name: "Угольный слизень"
+    item-material: COAL
+    favorite-food: BLAZE_POWDER
+    rarity: rare
+    capture-difficulty: 5
+    sell-price: 54
+    interest-seconds: 27
+    size: 2
+  slime_crystal:
+    display-name: "Кристальный слайм"
+    item-material: PRISMARINE_CRYSTALS
+    favorite-food: NETHER_STALK
+    rarity: rare
+    capture-difficulty: 6
+    sell-price: 68
+    interest-seconds: 25
+    size: 2
+  slime_gold:
+    display-name: "Золотой слайм"
+    item-material: GOLD_INGOT
+    favorite-food: GOLDEN_CARROT
+    rarity: legendary
+    capture-difficulty: 9
+    sell-price: 150
+    interest-seconds: 18
+    size: 2
+  slime_fire:
+    display-name: "Огненный слайм"
+    item-material: BLAZE_POWDER
+    favorite-food: BREAD
+    rarity: rare
+    capture-difficulty: 5
+    sell-price: 55
+    interest-seconds: 28
+    size: 2
+  slime_lava:
+    display-name: "Лавовый слайм"
+    item-material: MAGMA_CREAM
+    favorite-food: BLAZE_POWDER
+    rarity: rare
+    capture-difficulty: 6
+    sell-price: 64
+    interest-seconds: 25
+    size: 2
+  slime_smoke:
+    display-name: "Дымный слизень"
+    item-material: INK_SACK
+    favorite-food: NETHER_STALK
+    rarity: rare
+    capture-difficulty: 6
+    sell-price: 60
+    interest-seconds: 25
+    size: 2
+  slime_obsidian:
+    display-name: "Обсидиановый слизень"
+    item-material: OBSIDIAN
+    favorite-food: CACTUS
+    rarity: epic
+    capture-difficulty: 7
+    sell-price: 88
+    interest-seconds: 23
+    size: 3
+  slime_dynamite:
+    display-name: "Динамит слайм"
+    item-material: TNT
+    favorite-food: BLAZE_POWDER
+    rarity: epic
+    capture-difficulty: 8
+    sell-price: 110
+    interest-seconds: 20
+    size: 2
+  slime_nightmare:
+    display-name: "Кошмарный слайм"
+    item-material: EYE_OF_ENDER
+    favorite-food: BROWN_MUSHROOM
+    rarity: epic
+    capture-difficulty: 8
+    sell-price: 105
+    interest-seconds: 20
+    size: 2
+  slime_mimic:
+    display-name: "Мимик слайм"
+    item-material: CHEST
+    favorite-food: PUMPKIN
+    rarity: epic
+    capture-difficulty: 8
+    sell-price: 100
+    interest-seconds: 20
+    size: 2
+  slime_radioactive:
+    display-name: "Радиоактивный слайм"
+    item-material: EMERALD
+    favorite-food: POTATO_ITEM
+    rarity: epic
+    capture-difficulty: 8
+    sell-price: 112
+    interest-seconds: 20
+    size: 2
+  slime_amethyst:
+    display-name: "Аметистовый слайм"
+    item-material: DIAMOND
+    favorite-food: SPECKLED_MELON
+    rarity: epic
+    capture-difficulty: 7
+    sell-price: 95
+    interest-seconds: 22
+    size: 2
+  slime_money:
+    display-name: "Денежный слайм"
+    item-material: GOLD_NUGGET
+    favorite-food: GOLDEN_CARROT
+    rarity: legendary
+    capture-difficulty: 10
+    sell-price: 220
+    interest-seconds: 16
+    size: 2
+  slime_cat:
+    display-name: "Кото-слайм"
+    item-material: RAW_FISH
+    favorite-food: RAW_FISH
+    rarity: rare
+    capture-difficulty: 6
+    sell-price: 72
+    interest-seconds: 25
+    size: 2
+  slime_firefly:
+    display-name: "Светлячок слайм"
+    item-material: GLOWSTONE_DUST
+    favorite-food: SUGAR
+    rarity: rare
+    capture-difficulty: 6
+    sell-price: 74
+    interest-seconds: 25
+    size: 2
+  slime_sleepy:
+    display-name: "Сонный слайм"
+    item-material: BED
+    favorite-food: BROWN_MUSHROOM
+    rarity: rare
+    capture-difficulty: 5
+    sell-price: 58
+    interest-seconds: 27
+    size: 2
+  slime_cactus:
+    display-name: "Кактусовый слайм"
+    item-material: CACTUS
+    favorite-food: CACTUS
+    rarity: rare
+    capture-difficulty: 5
+    sell-price: 56
+    interest-seconds: 27
+    size: 2
+  slime_cloud:
+    display-name: "Облако-слайм"
+    item-material: FEATHER
+    favorite-food: SUGAR
+    rarity: rare
+    capture-difficulty: 6
+    sell-price: 76
+    interest-seconds: 25
+    size: 2
+  slime_lightning:
+    display-name: "Слайм молния"
+    item-material: REDSTONE
+    favorite-food: SUGAR
+    rarity: epic
+    capture-difficulty: 8
+    sell-price: 118
+    interest-seconds: 20
+    size: 2
+  slime_mist:
+    display-name: "Туманный слайм"
+    item-material: GHAST_TEAR
+    favorite-food: BROWN_MUSHROOM
+    rarity: rare
+    capture-difficulty: 7
+    sell-price: 84
+    interest-seconds: 22
+    size: 2
+  slime_flower:
+    display-name: "Цветочный слайм"
+    item-material: RED_ROSE
+    favorite-food: APPLE
+    rarity: common
+    capture-difficulty: 2
+    sell-price: 22
+    interest-seconds: 34
+    size: 2

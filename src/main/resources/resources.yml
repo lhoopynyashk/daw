@@ -1,0 +1,361 @@
+resources:
+  res_meadow_fiber:
+    display-name: Луговое волокно
+    location: loc_azure_cliffs
+    rarity: common
+    spawn-zone: Открытые поля Розового слайма
+    use: Стартовые семена, обучение сбору
+  res_soft_soil:
+    display-name: Мягкая земля
+    location: loc_azure_cliffs
+    rarity: common
+    spawn-zone: Открытые поля и края фермерских троп
+    use: Базовые семена и простые фермерские крафты
+  res_water_drop:
+    display-name: Капля воды
+    location: loc_azure_cliffs
+    rarity: common
+    spawn-zone: Берег, мелководье, камни около центрального водопада
+    use: Стартовые водные рецепты и сладкорост
+  res_algae_fiber:
+    display-name: Водорослевое волокно
+    location: loc_azure_cliffs
+    rarity: uncommon
+    spawn-zone: Берег и мелководье Водного слайма
+    use: Водные семена
+  res_sandy_salt:
+    display-name: Песчаная соль
+    location: loc_azure_cliffs
+    rarity: uncommon
+    spawn-zone: Берег и рифовая зона Кораллового слайма
+    use: Морская капуста и водные рецепты
+  res_flower_pollen:
+    display-name: Цветочная пыльца
+    location: loc_azure_cliffs
+    rarity: uncommon
+    spawn-zone: Цветочная поляна Цветочного слайма
+    use: Природные семена и цветочные рецепты
+  res_bright_spores:
+    display-name: Светлые споры
+    location: loc_azure_cliffs
+    rarity: rare
+    spawn-zone: Тенистая мини-пещера Грибного слайма
+    use: Грибные семена, первый грибной ресурс
+  res_meadow_root:
+    display-name: Луговой корень
+    location: loc_azure_cliffs
+    rarity: common
+    spawn-zone: Верхние поля и мягкие склоны
+    use: Семена луговой моркови
+  res_sun_pollen:
+    display-name: Солнечная пыльца
+    location: loc_azure_cliffs
+    rarity: uncommon
+    spawn-zone: Солнечные цветочные поляны
+    use: Семена солнечной ягоды
+  res_forest_branch:
+    display-name: Лесная ветка
+    location: loc_darkwood
+    rarity: common
+    spawn-zone: Лесные тропы и кустарники
+    use: Ежевичные рецепты
+  res_wild_berry:
+    display-name: Дикая ягода
+    location: loc_darkwood
+    rarity: common
+    spawn-zone: Ягодные кусты
+    use: Семена ежевичного куста
+  res_flower_nectar:
+    display-name: Цветочный нектар
+    location: loc_darkwood
+    rarity: uncommon
+    spawn-zone: Медовые и цветочные поляны
+    use: Семена медоцвета
+  res_strange_seed:
+    display-name: Странное семя
+    location: loc_darkwood
+    rarity: uncommon
+    spawn-zone: Скрытые лесные заросли
+    use: Семена пряной тыквы
+  res_lake_leaf:
+    display-name: Лист озера
+    location: loc_azure_cliffs
+    rarity: uncommon
+    spawn-zone: Скрытое озеро у водопада
+    use: Семена листа кувшинки
+  res_waterfall_drop:
+    display-name: Капля водопада
+    location: loc_azure_cliffs
+    rarity: uncommon
+    spawn-zone: Центральный водопад
+    use: Семена листа кувшинки
+  res_coral_dust:
+    display-name: Коралловая крошка
+    location: loc_azure_cliffs
+    rarity: uncommon
+    spawn-zone: Рифовая зона
+    use: Семена кораллового ростка
+  res_sea_salt:
+    display-name: Морская соль
+    location: loc_azure_cliffs
+    rarity: uncommon
+    spawn-zone: Берег и рифы
+    use: Коралловые рецепты
+  res_swamp_sludge:
+    display-name: Болотная тина
+    location: loc_darkwood
+    rarity: uncommon
+    spawn-zone: Болотные низины
+    use: Семена болотной ряски
+  res_dark_water:
+    display-name: Тёмная вода
+    location: loc_darkwood
+    rarity: uncommon
+    spawn-zone: Болотные и ночные зоны
+    use: Семена болотной ряски
+  res_spring_drop:
+    display-name: Капля родника
+    location: loc_northern_cascades
+    rarity: rare
+    spawn-zone: Горячие источники и родники
+    use: Влажные рецепты и катализаторы
+  res_warm_mineral:
+    display-name: Тёплый минерал
+    location: loc_northern_cascades
+    rarity: rare
+    spawn-zone: Горячие источники
+    use: Семена родникового лотоса
+  res_mycelium:
+    display-name: Мицелий
+    location: loc_darkwood
+    rarity: uncommon
+    spawn-zone: Грибные зоны
+    use: Грибные рецепты и катализаторы
+  res_dark_pollen:
+    display-name: Тёмная пыльца
+    location: loc_darkwood
+    rarity: uncommon
+    spawn-zone: Ночные цветы
+    use: Споры ночной шляпки
+  res_lunar_dew:
+    display-name: Лунная роса
+    location: loc_darkwood
+    rarity: rare
+    spawn-zone: Ночные поляны
+    use: Ночные грибные рецепты
+  res_cave_dust:
+    display-name: Пещерная пыль
+    location: loc_underheart
+    rarity: uncommon
+    spawn-zone: Пещерные тропы
+    use: Пещерные споры
+  res_mist_essence:
+    display-name: Туманная эссенция
+    location: loc_northern_cascades
+    rarity: rare
+    spawn-zone: Туманная горная низина
+    use: Споры туманного гриба
+  res_wet_mycelium:
+    display-name: Влажный мицелий
+    location: loc_darkwood
+    rarity: rare
+    spawn-zone: Сырые грибницы
+    use: Споры туманного гриба
+  res_moon_shard:
+    display-name: Лунный осколок
+    location: loc_sky_edges
+    rarity: epic
+    spawn-zone: Ночные острова
+    use: Споры лунного мицелия
+  res_black_spore:
+    display-name: Чёрная спора
+    location: loc_darkwood
+    rarity: epic
+    spawn-zone: Секретные грибницы
+    use: Споры лунного мицелия
+  res_toxic_essence:
+    display-name: Токсичная эссенция
+    location: loc_darkwood
+    rarity: epic
+    spawn-zone: Ядовитые топи и корни старых грибов
+    use: Редкие грибные семена и алхимические рецепты
+  res_ash:
+    display-name: Пепел
+    location: loc_ash_sands
+    rarity: common
+    spawn-zone: Пепельные тропы
+    use: Горячие рецепты
+  res_dry_root:
+    display-name: Сухой корень
+    location: loc_ash_sands
+    rarity: common
+    spawn-zone: Сухие кусты
+    use: Семена пепельного корня
+  res_ash_dust:
+    display-name: Пепельная пыль
+    location: loc_ash_sands
+    rarity: common
+    spawn-zone: Пепельные россыпи
+    use: Семена жгучего перца
+  res_red_pepper:
+    display-name: Красный перец
+    location: loc_ash_sands
+    rarity: uncommon
+    spawn-zone: Горячие грядки и сухие заросли
+    use: Семена жгучего перца
+  res_magma_shard:
+    display-name: Магмовый осколок
+    location: loc_ash_sands
+    rarity: rare
+    spawn-zone: Лавовые разломы
+    use: Магмовые рецепты и горячий катализатор
+  res_volcanic_soil:
+    display-name: Вулканическая почва
+    location: loc_ash_sands
+    rarity: rare
+    spawn-zone: Вулканические площадки
+    use: Семена магмовой лозы
+  res_volcanic_ash:
+    display-name: Вулканический пепел
+    location: loc_ash_sands
+    rarity: uncommon
+    spawn-zone: Дымные зоны
+    use: Семена дымного табака
+  res_gray_grass:
+    display-name: Серая трава
+    location: loc_ash_sands
+    rarity: uncommon
+    spawn-zone: Выжженные поля
+    use: Семена дымного табака
+  res_obsidian_crumb:
+    display-name: Обсидиановая крошка
+    location: loc_underheart
+    rarity: epic
+    spawn-zone: Обсидиановые карманы
+    use: Семена обсидианового кактуса
+  res_magma_resin:
+    display-name: Магмовая смола
+    location: loc_ash_sands
+    rarity: epic
+    spawn-zone: Лавовые корни
+    use: Семена обсидианового кактуса
+  res_stone_dust:
+    display-name: Каменная пыль
+    location: loc_northern_cascades
+    rarity: common
+    spawn-zone: Каменные тропы
+    use: Каменные и кристальные рецепты
+  res_mountain_salt:
+    display-name: Горная соль
+    location: loc_northern_cascades
+    rarity: common
+    spawn-zone: Горные тропы
+    use: Кристальные рецепты
+  res_sulfur:
+    display-name: Сера
+    location: loc_ash_sands
+    rarity: uncommon
+    spawn-zone: Серные пятна
+    use: Семена серной репы
+  res_dry_soil:
+    display-name: Сухая земля
+    location: loc_ash_sands
+    rarity: common
+    spawn-zone: Сухие тропы
+    use: Семена серной репы
+  res_coal_dust:
+    display-name: Угольная пыль
+    location: loc_ash_sands
+    rarity: uncommon
+    spawn-zone: Обугленные жилы и края лавовых трещин
+    use: Горячие семена и дымные фермерские рецепты
+  res_crystal_shard:
+    display-name: Кристальный осколок
+    location: loc_northern_cascades
+    rarity: rare
+    spawn-zone: Пещера за водопадом
+    use: Кристальная лоза и кристальный катализатор
+  res_golden_pollen:
+    display-name: Золотая пыльца
+    location: loc_underheart
+    rarity: epic
+    spawn-zone: Редкие минерализованные цветы
+    use: Семена золотого шафрана
+  res_rare_mineral:
+    display-name: Редкий минерал
+    location: loc_underheart
+    rarity: epic
+    spawn-zone: Скрытые минералы
+    use: Поздние кристальные рецепты
+  res_amethyst_shard:
+    display-name: Аметистовый осколок
+    location: loc_underheart
+    rarity: epic
+    spawn-zone: Аметистовые жилы
+    use: Семена аметистовой ягоды
+  res_glowing_soil:
+    display-name: Сияющая земля
+    location: loc_underheart
+    rarity: epic
+    spawn-zone: Светящиеся подземные пятна
+    use: Семена аметистовой ягоды
+  res_cloud_fiber:
+    display-name: Облачное волокно
+    location: loc_sky_edges
+    rarity: common
+    spawn-zone: Нижние облачные острова
+    use: Небесные рецепты
+  res_light_dust:
+    display-name: Лёгкая пыль
+    location: loc_sky_edges
+    rarity: common
+    spawn-zone: Парящие тропы
+    use: Семена облачного ростка
+  res_storm_charge:
+    display-name: Грозовой заряд
+    location: loc_sky_edges
+    rarity: rare
+    spawn-zone: Грозовые кристаллы
+    use: Грозовая мята и небесный катализатор
+  res_sky_grass:
+    display-name: Небесная трава
+    location: loc_sky_edges
+    rarity: uncommon
+    spawn-zone: Верхние острова
+    use: Семена грозовой мяты
+  res_glowing_pollen:
+    display-name: Светящаяся пыльца
+    location: loc_sky_edges
+    rarity: uncommon
+    spawn-zone: Ночные островки
+    use: Светлячковая трава
+  res_night_dew:
+    display-name: Ночная роса
+    location: loc_sky_edges
+    rarity: rare
+    spawn-zone: Спокойные облачные зоны
+    use: Светлячковая трава, ночные рецепты
+  res_rainbow_essence:
+    display-name: Радужная эссенция
+    location: loc_sky_edges
+    rarity: legendary
+    spawn-zone: Радужная арка или ивентовая зона
+    use: Радужный плод
+  res_sky_shard:
+    display-name: Небесный осколок
+    location: loc_sky_edges
+    rarity: legendary
+    spawn-zone: Финальная башня и дальние острова
+    use: Радужный плод
+  res_glass:
+    display-name: Стекло
+    location: loc_farm_hub
+    rarity: common
+    spawn-zone: Переработка песка и базовые материалы
+    use: Капсула слияния
+  res_neutral_stabilizer:
+    display-name: Нейтральный стабилизатор
+    location: loc_farm_hub
+    rarity: uncommon
+    spawn-zone: Крафт лаборатории
+    use: Основа капсулы слияния

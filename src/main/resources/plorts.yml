@@ -1,0 +1,118 @@
+plorts:
+  plort_pink:
+    display-name: "Розовый плорт"
+    base-price: 10
+  plort_ugly:
+    display-name: "Нестабильный плорт"
+    base-price: 12
+  plort_water:
+    display-name: "Водный плорт"
+    base-price: 18
+  plort_coral:
+    display-name: "Коралловый плорт"
+    base-price: 18
+  plort_lily_pad:
+    display-name: "Кувшинковый плорт"
+    base-price: 34
+  plort_swamp:
+    display-name: "Болотный плорт"
+    base-price: 30
+  plort_geyser:
+    display-name: "Гейзерный плорт"
+    base-price: 42
+  plort_ice:
+    display-name: "Ледяной плорт"
+    base-price: 26
+  plort_snow:
+    display-name: "Снежный плорт"
+    base-price: 28
+  plort_rainbow:
+    display-name: "Радужный плорт"
+    base-price: 160
+  plort_moss:
+    display-name: "Моховой плорт"
+    base-price: 20
+  plort_strawberry:
+    display-name: "Земляничный плорт"
+    base-price: 28
+  plort_blackberry:
+    display-name: "Ежевичный плорт"
+    base-price: 30
+  plort_honey:
+    display-name: "Медовый плорт"
+    base-price: 28
+  plort_mushroom:
+    display-name: "Грибной плорт"
+    base-price: 32
+  plort_rocky:
+    display-name: "Каменистый плорт"
+    base-price: 22
+  plort_cave:
+    display-name: "Пещерный плорт"
+    base-price: 38
+  plort_sulfur:
+    display-name: "Серный плорт"
+    base-price: 50
+  plort_coal:
+    display-name: "Угольный плорт"
+    base-price: 38
+  plort_crystal:
+    display-name: "Кристальный плорт"
+    base-price: 56
+  plort_gold:
+    display-name: "Золотой плорт"
+    base-price: 140
+  plort_fire:
+    display-name: "Огненный плорт"
+    base-price: 42
+  plort_lava:
+    display-name: "Лавовый плорт"
+    base-price: 52
+  plort_smoke:
+    display-name: "Дымный плорт"
+    base-price: 48
+  plort_obsidian:
+    display-name: "Обсидиановый плорт"
+    base-price: 76
+  plort_dynamite:
+    display-name: "Динамитный плорт"
+    base-price: 96
+  plort_nightmare:
+    display-name: "Кошмарный плорт"
+    base-price: 92
+  plort_mimic:
+    display-name: "Мимик-плорт"
+    base-price: 86
+  plort_radioactive:
+    display-name: "Радиоактивный плорт"
+    base-price: 98
+  plort_amethyst:
+    display-name: "Аметистовый плорт"
+    base-price: 80
+  plort_money:
+    display-name: "Денежный плорт"
+    base-price: 190
+  plort_cat:
+    display-name: "Кото-плорт"
+    base-price: 58
+  plort_firefly:
+    display-name: "Светлячковый плорт"
+    base-price: 60
+  plort_sleepy:
+    display-name: "Сонный плорт"
+    base-price: 46
+  plort_cactus:
+    display-name: "Кактусовый плорт"
+    base-price: 44
+  plort_cloud:
+    display-name: "Облачный плорт"
+    base-price: 62
+  plort_lightning:
+    display-name: "Молниевый плорт"
+    base-price: 104
+  plort_mist:
+    display-name: "Туманный плорт"
+    base-price: 70
+  plort_flower:
+    display-name: "Цветочный плорт"
+    base-price: 16

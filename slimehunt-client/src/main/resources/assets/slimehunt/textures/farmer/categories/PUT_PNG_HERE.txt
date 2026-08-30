@@ -1,0 +1,1 @@
+Put plot_basic.png, plot_wet.png, plot_mycelium.png, plot_hot.png, plot_crystal.png and plot_sky.png here.

@@ -1,0 +1,32 @@
+plants:
+  plant_sweetroot: { display-name: "Сладкорост", seed-id: seed_sweetroot, plot-type: basic, output-food: plant_sweetroot, growth-seconds: 240, seed-price: 4, harvest-amount: 3 }
+  plant_meadow_carrot: { display-name: "Луговая морковь", seed-id: seed_meadow_carrot, plot-type: basic, output-food: plant_meadow_carrot, growth-seconds: 300, seed-price: 5, harvest-amount: 3 }
+  plant_sun_berry: { display-name: "Солнечная ягода", seed-id: seed_sun_berry, plot-type: basic, output-food: plant_sun_berry, growth-seconds: 330, seed-price: 7, harvest-amount: 3 }
+  plant_blackberry_bush: { display-name: "Ежевичный куст", seed-id: seed_blackberry_bush, plot-type: basic, output-food: plant_blackberry_bush, growth-seconds: 360, seed-price: 8, harvest-amount: 3 }
+  plant_honeyflower: { display-name: "Медоцвет", seed-id: seed_honeyflower, plot-type: basic, output-food: plant_honeyflower, growth-seconds: 420, seed-price: 12, harvest-amount: 2 }
+  plant_spicy_pumpkin: { display-name: "Пряная тыква", seed-id: seed_spicy_pumpkin, plot-type: basic, output-food: plant_spicy_pumpkin, growth-seconds: 450, seed-price: 12, harvest-amount: 2 }
+  plant_sea_kale: { display-name: "Морская капуста", seed-id: seed_sea_kale, plot-type: wet, output-food: plant_sea_kale, growth-seconds: 420, seed-price: 8, harvest-amount: 3 }
+  plant_blue_algae: { display-name: "Синяя водоросль", seed-id: seed_blue_algae, plot-type: wet, output-food: plant_blue_algae, growth-seconds: 450, seed-price: 10, harvest-amount: 3 }
+  plant_lily_leaf: { display-name: "Лист кувшинки", seed-id: seed_lily_leaf, plot-type: wet, output-food: plant_lily_leaf, growth-seconds: 480, seed-price: 12, harvest-amount: 3 }
+  plant_coral_sprout: { display-name: "Коралловый росток", seed-id: seed_coral_sprout, plot-type: wet, output-food: plant_coral_sprout, growth-seconds: 540, seed-price: 15, harvest-amount: 2 }
+  plant_swamp_duckweed: { display-name: "Болотная ряска", seed-id: seed_swamp_duckweed, plot-type: wet, output-food: plant_swamp_duckweed, growth-seconds: 570, seed-price: 16, harvest-amount: 3 }
+  plant_spring_lotus: { display-name: "Родниковый лотос", seed-id: seed_spring_lotus, plot-type: wet, output-food: plant_spring_lotus, growth-seconds: 660, seed-price: 22, harvest-amount: 2 }
+  plant_bright_mushroom: { display-name: "Светлый гриб", seed-id: spore_bright_mushroom, plot-type: mycelium, output-food: plant_bright_mushroom, growth-seconds: 480, seed-price: 10, harvest-amount: 2 }
+  plant_night_cap: { display-name: "Ночная шляпка", seed-id: spore_night_cap, plot-type: mycelium, output-food: plant_night_cap, growth-seconds: 600, seed-price: 18, harvest-amount: 2 }
+  plant_mist_mushroom: { display-name: "Туманный гриб", seed-id: spore_mist_mushroom, plot-type: mycelium, output-food: plant_mist_mushroom, growth-seconds: 720, seed-price: 24, harvest-amount: 2 }
+  plant_cave_spore: { display-name: "Пещерная спора", seed-id: spore_cave_spore, plot-type: mycelium, output-food: plant_cave_spore, growth-seconds: 540, seed-price: 14, harvest-amount: 3 }
+  plant_lunar_mycelium: { display-name: "Лунный мицелий", seed-id: spore_lunar_mycelium, plot-type: mycelium, output-food: plant_lunar_mycelium, growth-seconds: 900, seed-price: 32, harvest-amount: 1 }
+  plant_ash_root: { display-name: "Пепельный корень", seed-id: seed_ash_root, plot-type: hot, output-food: plant_ash_root, growth-seconds: 480, seed-price: 12, harvest-amount: 3 }
+  plant_hot_pepper: { display-name: "Жгучий перец", seed-id: seed_hot_pepper, plot-type: hot, output-food: plant_hot_pepper, growth-seconds: 540, seed-price: 15, harvest-amount: 3 }
+  plant_magma_vine: { display-name: "Магмовая лоза", seed-id: seed_magma_vine, plot-type: hot, output-food: plant_magma_vine, growth-seconds: 720, seed-price: 25, harvest-amount: 2 }
+  plant_smoke_tobacco: { display-name: "Дымный табак", seed-id: seed_smoke_tobacco, plot-type: hot, output-food: plant_smoke_tobacco, growth-seconds: 600, seed-price: 18, harvest-amount: 2 }
+  plant_obsidian_cactus: { display-name: "Обсидиановый кактус", seed-id: seed_obsidian_cactus, plot-type: hot, output-food: plant_obsidian_cactus, growth-seconds: 900, seed-price: 34, harvest-amount: 1 }
+  plant_stone_tuber: { display-name: "Каменный клубень", seed-id: seed_stone_tuber, plot-type: crystal, output-food: plant_stone_tuber, growth-seconds: 540, seed-price: 14, harvest-amount: 3 }
+  plant_sulfur_turnip: { display-name: "Серная репа", seed-id: seed_sulfur_turnip, plot-type: crystal, output-food: plant_sulfur_turnip, growth-seconds: 600, seed-price: 18, harvest-amount: 2 }
+  plant_crystal_vine: { display-name: "Кристальная лоза", seed-id: seed_crystal_vine, plot-type: crystal, output-food: plant_crystal_vine, growth-seconds: 750, seed-price: 26, harvest-amount: 2 }
+  plant_golden_saffron: { display-name: "Золотой шафран", seed-id: seed_golden_saffron, plot-type: crystal, output-food: plant_golden_saffron, growth-seconds: 960, seed-price: 38, harvest-amount: 1 }
+  plant_amethyst_berry: { display-name: "Аметистовая ягода", seed-id: seed_amethyst_berry, plot-type: crystal, output-food: plant_amethyst_berry, growth-seconds: 900, seed-price: 36, harvest-amount: 2 }
+  plant_cloud_sprout: { display-name: "Облачный росток", seed-id: seed_cloud_sprout, plot-type: sky, output-food: plant_cloud_sprout, growth-seconds: 600, seed-price: 18, harvest-amount: 3 }
+  plant_storm_mint: { display-name: "Грозовая мята", seed-id: seed_storm_mint, plot-type: sky, output-food: plant_storm_mint, growth-seconds: 780, seed-price: 28, harvest-amount: 2 }
+  plant_firefly_grass: { display-name: "Светлячковая трава", seed-id: seed_firefly_grass, plot-type: sky, output-food: plant_firefly_grass, growth-seconds: 690, seed-price: 23, harvest-amount: 2 }
+  plant_rainbow_fruit: { display-name: "Радужный плод", seed-id: seed_rainbow_fruit, plot-type: sky, output-food: plant_rainbow_fruit, growth-seconds: 1200, seed-price: 50, harvest-amount: 1 }

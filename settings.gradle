@@ -1,0 +1,15 @@
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        maven {
+            url = 'https://repo.c7x.dev/repository/maven-public/'
+            credentials {
+                username = providers.gradleProperty('c7xUsername').orElse(System.getenv('C7X_USERNAME') ?: '').get()
+                password = providers.gradleProperty('c7xPassword').orElse(System.getenv('C7X_PASSWORD') ?: '').get()
+            }
+        }
+    }
+}
+
+rootProject.name = 'slimes'
+include 'slimehunt-client'

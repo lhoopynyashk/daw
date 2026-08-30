@@ -1,0 +1,112 @@
+levels:
+  1:
+    default:
+      slime-food:
+        title: "Морковная приманка"
+        description: "10 морковок для первых охот."
+        quality: common
+        icon: CARROT_ITEM
+        actions:
+          food:
+            type: storage
+            item-id: carrot
+            amount: 10
+    premium:
+      pink-plorts:
+        title: "Премиум плорты"
+        description: "25 розовых плортов в хранилище."
+        quality: uncommon
+        icon: SLIME_BALL
+        actions:
+          plorts:
+            type: storage
+            item-id: plort_pink
+            amount: 25
+  2:
+    default:
+      coins:
+        title: "Стартовые монеты"
+        description: "250 монет на развитие ранчо."
+        quality: common
+        icon: GOLD_INGOT
+        actions:
+          coins:
+            type: coins
+            amount: 250
+    premium:
+      more-coins:
+        title: "Премиум монеты"
+        description: "750 монет на улучшения."
+        quality: rare
+        icon: GOLD_BLOCK
+        actions:
+          coins:
+            type: coins
+            amount: 750
+  3:
+    default:
+      seeds:
+        title: "Семена моркови"
+        description: "Набор семян для обычной грядки."
+        quality: common
+        icon: SEEDS
+        actions:
+          seeds:
+            type: storage
+            item-id: seed_carrot
+            amount: 6
+    premium:
+      berry-seeds:
+        title: "Семена ягод"
+        description: "Редкие семена для фермы."
+        quality: rare
+        icon: NETHER_STALK
+        actions:
+          seeds:
+            type: storage
+            item-id: seed_berry
+            amount: 4
+  4:
+    default:
+      pink-plorts-small:
+        title: "Розовые плорты"
+        description: "10 розовых плортов."
+        quality: common
+        icon: SLIME_BALL
+        actions:
+          plorts:
+            type: storage
+            item-id: plort_pink
+            amount: 10
+    premium:
+      blue-plorts:
+        title: "Синие плорты"
+        description: "15 синих плортов."
+        quality: rare
+        icon: PRISMARINE_CRYSTALS
+        actions:
+          plorts:
+            type: storage
+            item-id: plort_water
+            amount: 15
+  5:
+    default:
+      ranch-money:
+        title: "Кошелёк ранчера"
+        description: "500 монет."
+        quality: uncommon
+        icon: EMERALD
+        actions:
+          coins:
+            type: coins
+            amount: 500
+    premium:
+      ranch-money-premium:
+        title: "Большой кошелёк"
+        description: "1500 монет."
+        quality: epic
+        icon: EMERALD_BLOCK
+        actions:
+          coins:
+            type: coins
+            amount: 1500

@@ -1,0 +1,232 @@
+recipes:
+  recipe_seed_sweetroot:
+    station: farmer_table
+    category: plot_basic
+    result: seed_sweetroot
+    result-amount: 2
+    max-crafts-per-action: 16
+    ingredients: { res_meadow_fiber: 2, res_soft_soil: 1, res_water_drop: 1 }
+  recipe_seed_meadow_carrot:
+    station: farmer_table
+    category: plot_basic
+    result: seed_meadow_carrot
+    result-amount: 2
+    max-crafts-per-action: 16
+    ingredients: { res_meadow_root: 1, res_soft_soil: 1, plort_moss: 1 }
+  recipe_seed_sun_berry:
+    station: farmer_table
+    category: plot_basic
+    result: seed_sun_berry
+    result-amount: 2
+    max-crafts-per-action: 16
+    ingredients: { res_sun_pollen: 1, res_wild_berry: 1, plort_blackberry: 1 }
+  recipe_seed_blackberry_bush:
+    station: farmer_table
+    category: plot_basic
+    result: seed_blackberry_bush
+    result-amount: 2
+    max-crafts-per-action: 16
+    ingredients: { res_forest_branch: 1, res_wild_berry: 1, plort_blackberry: 1 }
+  recipe_seed_honeyflower:
+    station: farmer_table
+    category: plot_basic
+    result: seed_honeyflower
+    result-amount: 1
+    max-crafts-per-action: 16
+    ingredients: { res_flower_nectar: 1, res_soft_soil: 1, plort_honey: 1 }
+  recipe_seed_spicy_pumpkin:
+    station: farmer_table
+    category: plot_basic
+    result: seed_spicy_pumpkin
+    result-amount: 1
+    max-crafts-per-action: 16
+    ingredients: { res_strange_seed: 1, res_flower_pollen: 1, plort_strawberry: 1 }
+
+  recipe_seed_sea_kale:
+    station: farmer_table
+    category: plot_wet
+    result: seed_sea_kale
+    result-amount: 2
+    max-crafts-per-action: 16
+    ingredients: { res_algae_fiber: 1, res_sandy_salt: 1, plort_moss: 1 }
+  recipe_seed_blue_algae:
+    station: farmer_table
+    category: plot_wet
+    result: seed_blue_algae
+    result-amount: 2
+    max-crafts-per-action: 16
+    ingredients: { res_algae_fiber: 1, res_spring_drop: 1, plort_moss: 1 }
+  recipe_seed_lily_leaf:
+    station: farmer_table
+    category: plot_wet
+    result: seed_lily_leaf
+    result-amount: 2
+    max-crafts-per-action: 16
+    ingredients: { res_lake_leaf: 1, res_waterfall_drop: 1, plort_moss: 1 }
+  recipe_seed_coral_sprout:
+    station: farmer_table
+    category: plot_wet
+    result: seed_coral_sprout
+    result-amount: 1
+    max-crafts-per-action: 16
+    ingredients: { res_coral_dust: 1, res_sea_salt: 1, plort_honey: 1 }
+  recipe_seed_swamp_duckweed:
+    station: farmer_table
+    category: plot_wet
+    result: seed_swamp_duckweed
+    result-amount: 1
+    max-crafts-per-action: 16
+    ingredients: { res_swamp_sludge: 1, res_dark_water: 1, plort_moss: 1 }
+  recipe_seed_spring_lotus:
+    station: farmer_table
+    category: plot_wet
+    result: seed_spring_lotus
+    result-amount: 1
+    max-crafts-per-action: 16
+    ingredients: { res_spring_drop: 1, res_warm_mineral: 1, plort_honey: 1 }
+
+  recipe_spore_bright_mushroom:
+    station: farmer_table
+    category: plot_mycelium
+    result: spore_bright_mushroom
+    result-amount: 2
+    max-crafts-per-action: 16
+    ingredients: { res_bright_spores: 1, res_soft_soil: 1, plort_mushroom: 1 }
+  recipe_spore_night_cap:
+    station: farmer_table
+    category: plot_mycelium
+    result: spore_night_cap
+    result-amount: 1
+    max-crafts-per-action: 16
+    ingredients: { res_dark_pollen: 1, res_lunar_dew: 1, res_toxic_essence: 1, plort_mushroom: 1 }
+  recipe_spore_mist_mushroom:
+    station: farmer_table
+    category: plot_mycelium
+    result: spore_mist_mushroom
+    result-amount: 1
+    max-crafts-per-action: 16
+    ingredients: { res_mist_essence: 1, res_wet_mycelium: 1, plort_mushroom: 1 }
+  recipe_spore_cave_spore:
+    station: farmer_table
+    category: plot_mycelium
+    result: spore_cave_spore
+    result-amount: 2
+    max-crafts-per-action: 16
+    ingredients: { res_cave_dust: 1, res_mycelium: 1, plort_mushroom: 1 }
+  recipe_spore_lunar_mycelium:
+    station: farmer_table
+    category: plot_mycelium
+    result: spore_lunar_mycelium
+    result-amount: 1
+    max-crafts-per-action: 16
+    ingredients: { res_moon_shard: 1, res_black_spore: 1, plort_amethyst: 1 }
+
+  recipe_seed_ash_root:
+    station: farmer_table
+    category: plot_hot
+    result: seed_ash_root
+    result-amount: 2
+    max-crafts-per-action: 16
+    ingredients: { res_ash: 1, res_dry_root: 1, plort_coal: 1 }
+  recipe_seed_hot_pepper:
+    station: farmer_table
+    category: plot_hot
+    result: seed_hot_pepper
+    result-amount: 2
+    max-crafts-per-action: 16
+    ingredients: { res_ash_dust: 1, res_red_pepper: 1, plort_coal: 1 }
+  recipe_seed_magma_vine:
+    station: farmer_table
+    category: plot_hot
+    result: seed_magma_vine
+    result-amount: 1
+    max-crafts-per-action: 16
+    ingredients: { res_magma_shard: 1, res_volcanic_soil: 1, plort_coal: 1 }
+  recipe_seed_smoke_tobacco:
+    station: farmer_table
+    category: plot_hot
+    result: seed_smoke_tobacco
+    result-amount: 1
+    max-crafts-per-action: 16
+    ingredients: { res_volcanic_ash: 1, res_gray_grass: 1, res_coal_dust: 1, plort_coal: 1 }
+  recipe_seed_obsidian_cactus:
+    station: farmer_table
+    category: plot_hot
+    result: seed_obsidian_cactus
+    result-amount: 1
+    max-crafts-per-action: 16
+    ingredients: { res_obsidian_crumb: 1, res_magma_resin: 1, plort_amethyst: 1 }
+
+  recipe_seed_stone_tuber:
+    station: farmer_table
+    category: plot_crystal
+    result: seed_stone_tuber
+    result-amount: 2
+    max-crafts-per-action: 16
+    ingredients: { res_stone_dust: 1, res_mountain_salt: 1, plort_amethyst: 1 }
+  recipe_seed_sulfur_turnip:
+    station: farmer_table
+    category: plot_crystal
+    result: seed_sulfur_turnip
+    result-amount: 1
+    max-crafts-per-action: 16
+    ingredients: { res_sulfur: 1, res_dry_soil: 1, plort_coal: 1 }
+  recipe_seed_crystal_vine:
+    station: farmer_table
+    category: plot_crystal
+    result: seed_crystal_vine
+    result-amount: 1
+    max-crafts-per-action: 16
+    ingredients: { res_crystal_shard: 2, res_mountain_salt: 1, plort_amethyst: 1 }
+  recipe_seed_golden_saffron:
+    station: farmer_table
+    category: plot_crystal
+    result: seed_golden_saffron
+    result-amount: 1
+    max-crafts-per-action: 16
+    ingredients: { res_golden_pollen: 1, res_rare_mineral: 1, plort_amethyst: 1 }
+  recipe_seed_amethyst_berry:
+    station: farmer_table
+    category: plot_crystal
+    result: seed_amethyst_berry
+    result-amount: 1
+    max-crafts-per-action: 16
+    ingredients: { res_amethyst_shard: 1, res_glowing_soil: 1, plort_amethyst: 1 }
+
+  recipe_seed_cloud_sprout:
+    station: farmer_table
+    category: plot_sky
+    result: seed_cloud_sprout
+    result-amount: 2
+    max-crafts-per-action: 16
+    ingredients: { res_cloud_fiber: 1, res_light_dust: 1, plort_honey: 1 }
+  recipe_seed_storm_mint:
+    station: farmer_table
+    category: plot_sky
+    result: seed_storm_mint
+    result-amount: 1
+    max-crafts-per-action: 16
+    ingredients: { res_storm_charge: 1, res_sky_grass: 1, plort_amethyst: 1 }
+  recipe_seed_firefly_grass:
+    station: farmer_table
+    category: plot_sky
+    result: seed_firefly_grass
+    result-amount: 1
+    max-crafts-per-action: 16
+    ingredients: { res_glowing_pollen: 1, res_night_dew: 1, plort_honey: 1 }
+  recipe_seed_rainbow_fruit:
+    station: farmer_table
+    category: plot_sky
+    result: seed_rainbow_fruit
+    result-amount: 1
+    max-crafts-per-action: 16
+    ingredients: { res_rainbow_essence: 1, res_sky_shard: 1, plort_amethyst: 1 }
+
+  recipe_neutral_stabilizer:
+    station: slime_lab
+    category: lab_resources
+    result: res_neutral_stabilizer
+    result-amount: 1
+    coin-cost: 25
+    max-crafts-per-action: 8
+    ingredients: { res_soft_soil: 1, res_water_drop: 1, plort_pink: 1 }

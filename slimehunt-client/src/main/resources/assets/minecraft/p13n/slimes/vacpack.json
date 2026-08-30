@@ -1,0 +1,48 @@
+{
+  "id": "00000000-0000-0000-a148-000000000001",
+  "categoryId": "hand",
+  "contributor": "Lhoopy",
+  "name": "Vacpack",
+  "lore": [
+    "SlimeRancher vacuum tool"
+  ],
+  "type": "LEFT_ARM",
+  "locationRotation": {
+    "normal": {
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    "gui": {
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation": [
+        30.0,
+        135.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    }
+  },
+  "supportOptions": {},
+  "conflictGroups": []
+}

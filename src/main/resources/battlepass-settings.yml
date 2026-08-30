@@ -1,0 +1,13 @@
+title: "SlimeRancher Pass"
+max-level: 30
+experience-per-level: 1000
+duration-days: 30
+
+purchase:
+  price: 5000
+
+gift:
+  price: 5000
+
+special:
+  price: 9000

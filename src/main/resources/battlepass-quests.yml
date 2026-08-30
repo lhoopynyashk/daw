@@ -1,0 +1,33 @@
+categories:
+  daily:
+    title: "Ежедневные"
+  weekly:
+    title: "Еженедельные"
+  ranch:
+    title: "Ранчо"
+
+quests:
+  catch_pink_slime:
+    category: daily
+    title: "Розовая охота"
+    description: "Поймай 3 розовых слаймов."
+    target: 3
+    experience: 250
+  feed_slimes:
+    category: daily
+    title: "Сытый загон"
+    description: "Покорми слаймов 5 раз."
+    target: 5
+    experience: 300
+  harvest_crops:
+    category: ranch
+    title: "Первый урожай"
+    description: "Собери 8 растений с грядок."
+    target: 8
+    experience: 350
+  sell_plorts:
+    category: weekly
+    title: "Плортовый рынок"
+    description: "Продай 50 плортов."
+    target: 50
+    experience: 800

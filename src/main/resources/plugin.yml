@@ -1,0 +1,102 @@
+﻿name: Slimes
+version: 1.0-SNAPSHOT
+main: dev.lhoopy.core.SlimesPlugin
+load: STARTUP
+api-version: 1.12
+author: lhoopy
+depend:
+  - CoreAPI
+commands:
+  arbyz:
+    description: Sends watermelon text to chat
+    usage: /arbyz
+  starter:
+    description: Gives the minimal SlimeRancher starter loop
+    usage: /starter
+  hunt:
+    description: Starts the slime hunting minigame
+    usage: /hunt
+  hunt1:
+    description: Starts the Enginex slime hunting minigame
+    usage: /hunt1
+  huntzone:
+    description: Transfers player to the configured slime hunting realm
+    usage: /huntzone [realmType] [realmId]
+  locations:
+    description: Opens the SlimeRancher location selector
+    usage: /locations
+  sosat:
+    description: Gives a slime vacuum item
+    usage: /sosat
+  ranch:
+    description: Teleports player to a personal slime ranch
+    usage: /ranch
+  visit:
+    description: Teleports player to another online player's ranch
+    usage: /visit <player>
+  farm:
+    description: SlimeRancher farming commands
+    usage: /farm <plots|crops|buy|plant|water|harvest>
+  slimefood:
+    description: Gives favorite food for a slime type
+    usage: /slimefood <type>
+  music:
+    description: Starts or stops the default soundtrack
+    usage: /music [stop]
+  storage:
+    description: Manages SlimeRancher profile storage
+    usage: /storage <add|remove|protect|unprotect|list> [itemId] [amount]
+    permission: slimes.storage
+  vacpack:
+    description: Shows and transfers portable vacpack storage
+    usage: /vacpack <list|deposit|withdraw>
+  crafting:
+    description: Manages SlimeRancher crafting recipes
+    usage: /crafting <list|info|make>
+  farmertable:
+    description: Opens the SlimeRancher farmer table
+    usage: /farmertable
+    aliases: [farmer]
+  plorts:
+    description: Shows and sells produced plorts
+    usage: /plorts [collect|sell]
+  sellterminal:
+    description: Shows and sells plorts through the SlimeRancher sell terminal
+    usage: /sellterminal [sell]
+    aliases: [terminal, sellplorts]
+  penfeed:
+    description: Feeds slimes in the pen from profile storage
+    usage: /penfeed <all|slimeId>
+  pencase:
+    description: Opens the SlimeRancher pen blueprint case
+    usage: /pencase [give amount]
+  penstyle:
+    description: Opens owned SlimeRancher pen styles
+    usage: /penstyle
+  battlepass:
+    description: Opens the SlimeRancher battle pass
+    usage: /battlepass
+    aliases: [bp]
+  bp:
+    description: Opens the SlimeRancher battle pass
+    usage: /bp
+  slimesadmin:
+    description: SlimeRancher staff tools
+    usage: /slimesadmin <spawn|bukkit|packet|clear|whitelist>
+    permission: slimes.admin
+permissions:
+  slimes.admin:
+    description: Allows using SlimeRancher staff tools
+    default: op
+  slimes.whitelist:
+    description: Allows managing the SlimeRancher access list
+    default: op
+  slimes.storage:
+    description: Allows managing SlimeRancher profile storage
+    default: op
+  slimes.farm.debug:
+    description: Allows using SlimeRancher farm staff commands
+    default: op
+  slimes.battlepass.admin:
+    description: Allows managing SlimeRancher battle pass staff commands
+    default: op

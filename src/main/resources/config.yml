@@ -1,0 +1,92 @@
+soundtrack:
+  enabled: true
+  autoplay: true
+  volume: 0.35
+  start-delay-seconds: 4
+  gap-seconds: 5
+  tracks:
+    ranch_theme:
+      url: "https://cdn.jsdelivr.net/gh/lhoopynyashk/music@main/music.ogg"
+      duration-seconds: 149
+
+hunt-zone:
+  mode: local
+  realm-type: HUNT
+  realm-id: 148
+
+ranch-home:
+  realm-type: TEST
+  realm-id: 89
+
+realm-metadata:
+  enabled: true
+  readable-name: "SlimeRancher"
+  max-players: 20
+  refresh-seconds: 30
+
+ranch-worlds:
+  enabled: true
+  template-path: templates/ranch_template
+  runtime-prefix: ranch_
+  unload-delay-seconds: 15
+  delete-runtime-on-unload: true
+  build-fallback-platform: true
+  optimization:
+    enabled: true
+    cancel-natural-spawns: true
+    clear-dropped-items: true
+    clear-unused-entities: true
+    cleanup-interval-seconds: 30
+
+plort-production:
+  enabled: true
+  interval-seconds: 60
+  max-batches-per-tick: 30
+  pen-visual-stacks: 3
+  plorts-per-stack: 20
+
+pen:
+  feeding:
+    fed-duration-seconds: 300
+
+farm-plots:
+  plots:
+    plot_1:
+      x: -4
+      y: 90
+      z: -4
+      type: basic
+    plot_2:
+      x: 0
+      y: 90
+      z: -4
+      type: basic
+    plot_3:
+      x: 4
+      y: 90
+      z: -4
+      type: basic
+
+farmer-table:
+  npc:
+    enabled: true
+    name: "§aСтол фермера"
+    x: -8.5
+    y: 91.0
+    z: 0.5
+    yaw: 90.0
+
+sell-terminal:
+  npc:
+    enabled: true
+    name: "&6Терминал продажи"
+    x: 0.5
+    y: 91.0
+    z: 8.5
+    yaw: 180.0
+
+# Экран загрузки.
+# art-url — прямая ссылка на картинку фона (jpg или png, 1920x1080).
+# Пустое значение — экран останется тёмным, всё остальное работает.
+loading:
+  art-url: "https://raw.githubusercontent.com/makaroon1977-code/dsad/c03395326dc6f80ffaaf6cceb29598daa8f9688e/SlimeRancher-Keyart_Wishlist-Landscape-2560x1440-b2f7b22e6d19dff415daf5dbe4d8e78c%20(1).jpg"

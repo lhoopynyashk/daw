@@ -1,0 +1,75 @@
+plugins {
+    id 'java'
+    id 'gg.cristalix.bundler' version '6.1.6'
+}
+
+group = 'dev.lhoopy'
+version = '1.0-SNAPSHOT'
+
+// Đ•Đ´Đ¸Đ˝ŃŃ‚Đ˛ĐµĐ˝Đ˝Ń‹Đą Đ¸ŃŃ‚ĐľŃ‡Đ˝Đ¸Đş Đ˛ĐµŃ€ŃĐ¸Đ¸ ĐşĐ»Đ¸ĐµĐ˝Ń‚ŃĐşĐľĐłĐľ ĐĽĐľĐ´Đ°.
+// SlimeHuntMod.CLIENT_VERSION ĐľĐ±ŃŹĐ·Đ°Đ˝ ŃĐľĐ˛ĐżĐ°Đ´Đ°Ń‚ŃŚ â€” ŃŤŃ‚Đľ ĐżŃ€ĐľĐ˛ĐµŃ€ŃŹĐµŃ‚ checkClientVersion.
+ext.clientVersion = '1.0.66'
+
+repositories {
+    mavenCentral()
+    maven {
+        url = 'https://repo.c7x.dev/repository/maven-public/'
+        credentials {
+            username = findProperty('c7xUsername') ?: System.getenv('C7X_USERNAME')
+            password = findProperty('c7xPassword') ?: System.getenv('C7X_PASSWORD')
+        }
+    }
+}
+
+dependencies {
+    implementation('gg.cristalix:enginex:5.16.10') {
+        exclude group: 'ru.cristalix.client', module: 'clientapi'
+    }
+    compileOnly 'ru.cristalix.client:clientapi:3.1.16'
+}
+
+bundle {
+    modName = 'SlimeHunt'
+    mainClass = 'dev.lhoopy.slimehunt.client.SlimeHuntMod'
+    author = 'lhoopy'
+    asyncModLoad = true
+    persistent = false
+    modVersion = project.ext.clientVersion
+    gitHashVersion = false
+}
+
+jar {
+    archiveBaseName.set(bundle.modName)
+    archiveVersion.set('')
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+    from {
+        configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) }
+    }
+}
+
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = 'UTF-8'
+    sourceCompatibility = '1.8'
+    targetCompatibility = '1.8'
+}
+
+def clientSourceFile = file('src/main/java/dev/lhoopy/slimehunt/client/SlimeHuntMod.java')
+
+tasks.register('checkClientVersion') {
+    description = 'ĐźŃ€ĐľĐ˛ĐµŃ€ŃŹĐµŃ‚, Ń‡Ń‚Đľ CLIENT_VERSION ŃĐľĐ˛ĐżĐ°Đ´Đ°ĐµŃ‚ Ń ext.clientVersion.'
+    def expected = project.ext.clientVersion
+    inputs.file clientSourceFile
+    inputs.property 'expectedVersion', expected
+    doLast {
+        def matcher = clientSourceFile.text =~ /CLIENT_VERSION\s*=\s*"([^"]+)"/
+        if (!matcher.find()) {
+            throw new GradleException('CLIENT_VERSION Đ˝Đµ Đ˝Đ°ĐąĐ´ĐµĐ˝ Đ˛ SlimeHuntMod.java')
+        }
+        def actual = matcher.group(1)
+        if (actual != expected) {
+            throw new GradleException("Đ’ĐµŃ€ŃĐ¸ŃŹ ĐşĐ»Đ¸ĐµĐ˝Ń‚Đ° Ń€Đ°Đ·ĐľŃĐ»Đ°ŃŃŚ: build.gradle=$expected, SlimeHuntMod.CLIENT_VERSION=$actual")
+        }
+    }
+}
+
+tasks.named('jar') { dependsOn 'checkClientVersion' }
