@@ -62,12 +62,7 @@ public final class PenCaseService implements PluginService {
     public void shutdown() {
     }
 
-    public void handleCaseCommand(CommandSender sender, String[] args) {
-        if (!(sender instanceof Player)) {
-            sender.sendMessage("Команда доступна только игроку.");
-            return;
-        }
-        Player player = (Player) sender;
+    public void handleCaseCommand(Player player, String[] args) {
         if (args.length > 0 && args[0].equalsIgnoreCase("give")) {
             if (!player.hasPermission("slimes.admin")) {
                 player.sendMessage(ChatColor.RED + "Недостаточно прав.");
@@ -85,12 +80,8 @@ public final class PenCaseService implements PluginService {
         showCase(player);
     }
 
-    public void handleStyleCommand(CommandSender sender, String[] args) {
-        if (!(sender instanceof Player)) {
-            sender.sendMessage("Команда доступна только игроку.");
-            return;
-        }
-        showStyles((Player) sender);
+    public void handleStyleCommand(Player player, String[] args) {
+        showStyles((Player) player);
     }
 
     public void showCase(Player player) {

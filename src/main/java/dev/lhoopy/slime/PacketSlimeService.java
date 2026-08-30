@@ -42,13 +42,7 @@ public final class PacketSlimeService {
                 PacketSlimeMovementService.MOVEMENT_PERIOD_TICKS, PacketSlimeMovementService.MOVEMENT_PERIOD_TICKS);
     }
 
-    public void handleCommand(CommandSender sender, String[] args) {
-        if (!(sender instanceof Player)) {
-            sender.sendMessage("Эта команда доступна только игроку.");
-            return;
-        }
-
-        Player player = (Player) sender;
+    public void handleCommand(Player player, String[] args) {
         if (args.length > 0 && args[0].equalsIgnoreCase("clear")) {
             clear(player);
             player.sendMessage(ChatColor.GREEN + "Визуальные слаймы очищены.");

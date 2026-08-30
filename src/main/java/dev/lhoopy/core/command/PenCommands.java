@@ -10,7 +10,7 @@ public final class PenCommands {
     }
 
     public void register(SlimesCommandRouter router) {
-        router.register("pencase", this.services.penCaseService()::handleCaseCommand);
-        router.register("penstyle", this.services.penCaseService()::handleStyleCommand);
+        router.register("pencase", (PlayerCommand) this.services.penCaseService()::handleCaseCommand);
+        router.register("penstyle", (PlayerCommand) this.services.penCaseService()::handleStyleCommand);
     }
 }

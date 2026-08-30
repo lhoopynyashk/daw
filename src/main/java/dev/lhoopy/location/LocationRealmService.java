@@ -140,12 +140,8 @@ public final class LocationRealmService implements PluginService, Listener {
         this.locationWorld = null;
     }
 
-    public void openMenu(CommandSender sender, String[] ignored) {
-        if (!(sender instanceof Player)) {
-            sender.sendMessage("Эта команда доступна только игроку.");
-            return;
-        }
-        openMenu((Player) sender);
+    public void openMenu(Player player, String[] ignored) {
+        openMenu((Player) player);
     }
 
     public boolean returnToRanchIfInLocation(CommandSender sender) {
@@ -763,7 +759,11 @@ public final class LocationRealmService implements PluginService, Listener {
             IRealmService service = IRealmService.get();
             RealmInfo info = service == null ? null : service.getCurrentRealmInfo();
             return info == null ? null : info.getRealmId();
-        } catch (NoClassDefFoundError | Exception ignored) {
+        } catch (NoClassDefFoundError coreApiMissing) {
+            return null;
+        } catch (RuntimeException error) {
+            this.plugin.getLogger().warning(
+                    "Cristalix Core call failed: " + error);
             return null;
         }
     }

@@ -18,13 +18,7 @@ public final class SlimeSpawnService {
         this.registry = registry;
     }
 
-    public void spawn(CommandSender sender, String[] args) {
-        if (!(sender instanceof Player)) {
-            sender.sendMessage("Эта команда доступна только игроку.");
-            return;
-        }
-
-        Player player = (Player) sender;
+    public void spawn(Player player, String[] args) {
         String id = args.length >= 1 ? args[0] : null;
         SlimeDef definition = id == null ? this.contentRegistry.getDefaultSlime() : this.contentRegistry.getSlime(id);
         if (definition == null) {
@@ -46,13 +40,7 @@ public final class SlimeSpawnService {
                 + ChatColor.GRAY + " (" + state.name().toLowerCase() + ")");
     }
 
-    public void giveFavoriteFood(CommandSender sender, String[] args) {
-        if (!(sender instanceof Player)) {
-            sender.sendMessage("Эта команда доступна только игроку.");
-            return;
-        }
-
-        Player player = (Player) sender;
+    public void giveFavoriteFood(Player player, String[] args) {
         String id = args.length >= 1 ? args[0] : null;
         SlimeDef definition = id == null ? this.contentRegistry.getDefaultSlime() : this.contentRegistry.getSlime(id);
         if (definition == null) {

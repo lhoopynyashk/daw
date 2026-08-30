@@ -10,7 +10,7 @@ public final class EconomyCommands {
     }
 
     public void register(SlimesCommandRouter router) {
-        router.register("plorts", this.services.economyService()::handlePlortsCommand);
-        router.register("sellterminal", this.services.economyService()::handleSellTerminalCommand);
+        router.register("plorts", (PlayerCommand) this.services.economyService()::handlePlortsCommand);
+        router.register("sellterminal", (PlayerCommand) this.services.economyService()::handleSellTerminalCommand);
     }
 }

@@ -182,11 +182,11 @@ public final class FarmService implements PluginService, Listener {
         this.farmTravelService.teleportHome(sender);
     }
 
-    public void visit(CommandSender sender, String[] args) {
+    public void visit(Player sender, String[] args) {
         this.farmTravelService.visit(sender, args);
     }
 
-    public void handleCommand(CommandSender sender, String[] args) {
+    public void handleCommand(Player sender, String[] args) {
         this.farmCommand.handle(sender, args);
     }
 
@@ -302,7 +302,11 @@ public final class FarmService implements PluginService, Listener {
             }
             RealmInfo info = realmService.getCurrentRealmInfo();
             return info == null ? null : info.getRealmId();
-        } catch (NoClassDefFoundError | Exception ignored) {
+        } catch (NoClassDefFoundError coreApiMissing) {
+            return null;
+        } catch (RuntimeException error) {
+            this.plugin.getLogger().warning(
+                    "Cristalix Core call failed: " + error);
             return null;
         }
     }

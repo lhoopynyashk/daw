@@ -4,6 +4,7 @@ import dev.lhoopy.core.SlimesPlugin;
 import dev.lhoopy.core.lifecycle.PluginService;
 import dev.lhoopy.profile.ProfileService;
 import org.bukkit.command.CommandSender;
+import org.bukkit.entity.Player;
 
 public final class QuestService implements PluginService {
     private final SlimesPlugin plugin;
@@ -35,7 +36,7 @@ public final class QuestService implements PluginService {
         return this.battlePassService;
     }
 
-    public void handleBattlePassCommand(CommandSender sender, String[] args) {
+    public void handleBattlePassCommand(Player sender, String[] args) {
         this.battlePassService.handleCommand(sender, args);
     }
 }

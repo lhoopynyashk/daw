@@ -94,12 +94,7 @@ public final class BattlePassService implements Listener {
                 + ", quests=" + this.content.getQuests().size());
     }
 
-    public void handleCommand(CommandSender sender, String[] args) {
-        if (!(sender instanceof Player)) {
-            sender.sendMessage("Эта команда доступна только игроку.");
-            return;
-        }
-        Player player = (Player) sender;
+    public void handleCommand(Player player, String[] args) {
         if (args.length > 0 && args[0].equalsIgnoreCase("reload")) {
             if (!player.hasPermission("slimes.battlepass.admin")) {
                 player.sendMessage(ChatColor.RED + "Нет прав.");

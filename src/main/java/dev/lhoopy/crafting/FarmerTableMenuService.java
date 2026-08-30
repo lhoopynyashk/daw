@@ -52,12 +52,8 @@ public final class FarmerTableMenuService implements PluginService {
     public void shutdown() {
     }
 
-    public void open(CommandSender sender, String[] args) {
-        if (!(sender instanceof Player)) {
-            sender.sendMessage("Only players can open the farmer table.");
-            return;
-        }
-        open((Player) sender);
+    public void open(Player player, String[] args) {
+        open((Player) player);
     }
 
     public void open(Player player) {

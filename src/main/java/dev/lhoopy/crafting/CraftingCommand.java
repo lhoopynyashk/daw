@@ -4,6 +4,7 @@ import dev.lhoopy.content.ContentRegistry;
 import dev.lhoopy.content.RecipeDef;
 import dev.lhoopy.profile.PlayerProfile;
 import dev.lhoopy.profile.ProfileService;
+import dev.lhoopy.core.command.PlayerCommand;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
@@ -42,27 +43,27 @@ public final class CraftingCommand {
         }
 
         if (action.equals("make")) {
-            craftFromCommand(sender, args);
+            if (sender instanceof Player player) {
+                craftFromCommand(player, args);
+            } else {
+                sender.sendMessage(PlayerCommand.PLAYERS_ONLY);
+            }
             return;
         }
 
         this.messages.sendHelp(sender);
     }
 
-    private void craftFromCommand(CommandSender sender, String[] args) {
-        if (!(sender instanceof Player)) {
-            sender.sendMessage("Эта команда доступна только игроку.");
-            return;
-        }
+    private void craftFromCommand(Player player, String[] args) {
         if (args.length < 3) {
-            sender.sendMessage("§cИспользование: /crafting make <farmer_table|slime_lab> <recipeId> [amount]");
+            player.sendMessage("§cИспользование: /crafting make <farmer_table|slime_lab> <recipeId> [amount]");
             return;
         }
-        Integer amount = parseAmount(sender, args, 3);
+        Integer amount = parseAmount(player, args, 3);
         if (amount == null) {
             return;
         }
-        craft((Player) sender, args[1], args[2], amount);
+        craft((Player) player, args[1], args[2], amount);
     }
 
     private void craft(Player player, String stationId, String recipeId, int amount) {

@@ -79,7 +79,11 @@ public final class CoreProfileRepository implements ProfileRepository {
     private IPlayerDataService service() {
         try {
             return CoreApi.get().getService(IPlayerDataService.class);
-        } catch (NoClassDefFoundError | Exception ignored) {
+        } catch (NoClassDefFoundError coreApiMissing) {
+            return null;
+        } catch (RuntimeException error) {
+            this.plugin.getLogger().warning(
+                    "Cristalix Core call failed: " + error);
             return null;
         }
     }

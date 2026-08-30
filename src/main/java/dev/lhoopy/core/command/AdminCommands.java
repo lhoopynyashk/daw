@@ -32,13 +32,25 @@ public final class AdminCommands {
         String[] nestedArgs = Arrays.copyOfRange(args, 1, args.length);
         switch (action) {
             case "spawn":
-                this.services.slimeService().spawn(sender, nestedArgs);
+                if (sender instanceof Player player) {
+                    this.services.slimeService().spawn(player, nestedArgs);
+                } else {
+                    sender.sendMessage(PlayerCommand.PLAYERS_ONLY);
+                }
                 break;
             case "bukkit":
-                this.services.slimeService().spawnBukkit(sender, nestedArgs);
+                if (sender instanceof Player player) {
+                    this.services.slimeService().spawnBukkit(player, nestedArgs);
+                } else {
+                    sender.sendMessage(PlayerCommand.PLAYERS_ONLY);
+                }
                 break;
             case "packet":
-                this.services.slimeService().spawnPacket(sender, nestedArgs);
+                if (sender instanceof Player player) {
+                    this.services.slimeService().spawnPacket(player, nestedArgs);
+                } else {
+                    sender.sendMessage(PlayerCommand.PLAYERS_ONLY);
+                }
                 break;
             case "clear":
                 clearSlimes(sender, nestedArgs);

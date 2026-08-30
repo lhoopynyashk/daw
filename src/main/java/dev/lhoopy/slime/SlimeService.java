@@ -72,19 +72,19 @@ public final class SlimeService implements Listener {
         return SlimeVacuumItem.ensureInInventory(player);
     }
 
-    public void giveFavoriteFood(CommandSender sender, String[] args) {
+    public void giveFavoriteFood(Player sender, String[] args) {
         this.spawnService.giveFavoriteFood(sender, args);
     }
 
-    public void spawn(CommandSender sender, String[] args) {
+    public void spawn(Player sender, String[] args) {
         this.spawnPacket(sender, args);
     }
 
-    public void spawnBukkit(CommandSender sender, String[] args) {
+    public void spawnBukkit(Player sender, String[] args) {
         this.spawnService.spawn(sender, args);
     }
 
-    public void spawnPacket(CommandSender sender, String[] args) {
+    public void spawnPacket(Player sender, String[] args) {
         this.packetSlimeService.handleCommand(sender, args);
     }
 

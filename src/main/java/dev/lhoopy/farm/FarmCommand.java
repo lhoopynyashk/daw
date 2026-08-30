@@ -20,13 +20,7 @@ public final class FarmCommand {
         this.actions = new FarmPlotActions(contentRegistry, profileService, cropGrowthService, wateringService);
     }
 
-    public void handle(CommandSender sender, String[] args) {
-        if (!(sender instanceof Player)) {
-            sender.sendMessage(ChatColor.RED + "Эта команда доступна только игроку.");
-            return;
-        }
-
-        Player player = (Player) sender;
+    public void handle(Player player, String[] args) {
         if (args.length == 0 || args[0].equalsIgnoreCase("help")) {
             this.messages.sendUsage(player);
             return;

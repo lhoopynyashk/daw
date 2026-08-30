@@ -24,13 +24,7 @@ public final class StarterCommand {
         this.profileService = profileService;
     }
 
-    public void handle(CommandSender sender, String[] args) {
-        if (!(sender instanceof Player)) {
-            sender.sendMessage("Only players can use starter.");
-            return;
-        }
-
-        Player player = (Player) sender;
+    public void handle(Player player, String[] args) {
         if (!this.profileService.ensureLoaded(player)) {
             player.sendMessage(ChatColor.YELLOW + "Профиль загружается, попробуй ещё раз через пару секунд.");
             return;

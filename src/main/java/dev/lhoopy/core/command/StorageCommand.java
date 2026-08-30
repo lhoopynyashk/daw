@@ -12,17 +12,12 @@ public final class StorageCommand {
         this.storageService = storageService;
     }
 
-    public void handle(CommandSender sender, String[] args) {
-        if (!(sender instanceof Player)) {
-            sender.sendMessage("Эта команда доступна только игроку.");
-            return;
-        }
-        if (!sender.hasPermission("slimes.storage")) {
-            sender.sendMessage("\u00a7cНет доступа.");
+    public void handle(Player player, String[] args) {
+        if (!player.hasPermission("slimes.storage")) {
+            player.sendMessage("\u00a7cНет доступа.");
             return;
         }
 
-        Player player = (Player) sender;
         if (args.length == 0 || args[0].equalsIgnoreCase("help")) {
             sendUsage(player);
             return;

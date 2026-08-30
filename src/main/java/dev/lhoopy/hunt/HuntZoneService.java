@@ -51,13 +51,7 @@ public final class HuntZoneService implements PluginService {
         this.transferringPlayers.clear();
     }
 
-    public void transferToHuntZone(CommandSender sender, String[] args) {
-        if (!(sender instanceof Player)) {
-            sender.sendMessage("Эта команда доступна только игроку.");
-            return;
-        }
-
-        Player player = (Player) sender;
+    public void transferToHuntZone(Player player, String[] args) {
         if (isLocalMode() && args.length == 0) {
             player.sendMessage(ChatColor.YELLOW + "Охота сейчас в режиме local: отдельный реалм не нужен.");
             return;
@@ -269,7 +263,11 @@ public final class HuntZoneService implements PluginService {
             }
             RealmInfo info = realmService.getCurrentRealmInfo();
             return info == null ? null : info.getRealmId();
-        } catch (NoClassDefFoundError | Exception ignored) {
+        } catch (NoClassDefFoundError coreApiMissing) {
+            return null;
+        } catch (RuntimeException error) {
+            this.plugin.getLogger().warning(
+                    "Cristalix Core call failed: " + error);
             return null;
         }
     }

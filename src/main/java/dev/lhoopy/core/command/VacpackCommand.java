@@ -14,13 +14,7 @@ public final class VacpackCommand {
         this.storageService = storageService;
     }
 
-    public void handle(CommandSender sender, String[] args) {
-        if (!(sender instanceof Player)) {
-            sender.sendMessage("Эта команда доступна только игроку.");
-            return;
-        }
-
-        Player player = (Player) sender;
+    public void handle(Player player, String[] args) {
         if (args.length == 0 || args[0].equalsIgnoreCase("list")) {
             listItems(player);
             return;

@@ -11,13 +11,7 @@ public final class MusicCommand {
         this.soundtrackService = soundtrackService;
     }
 
-    public void handle(CommandSender sender, String[] args) {
-        if (!(sender instanceof Player)) {
-            sender.sendMessage("Эта команда доступна только игроку.");
-            return;
-        }
-
-        Player player = (Player) sender;
+    public void handle(Player player, String[] args) {
         if (args.length >= 1 && args[0].equalsIgnoreCase("stop")) {
             this.soundtrackService.stopFor(player);
             return;

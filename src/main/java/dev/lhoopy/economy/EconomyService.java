@@ -62,16 +62,11 @@ public final class EconomyService implements PluginService {
         this.plortProductionService.shutdown();
     }
 
-    public void handlePlortsCommand(CommandSender sender, String[] args) {
+    public void handlePlortsCommand(Player sender, String[] args) {
         this.plortsCommand.handle(sender, args);
     }
 
-    public void handleSellTerminalCommand(CommandSender sender, String[] args) {
-        if (!(sender instanceof Player)) {
-            sender.sendMessage("Эта команда доступна только игроку.");
-            return;
-        }
-        Player player = (Player) sender;
+    public void handleSellTerminalCommand(Player player, String[] args) {
         if (!this.profileService.ensureLoaded(player)) {
             player.sendMessage(ChatColor.YELLOW + "Профиль ещё загружается, попробуй через пару секунд.");
             return;

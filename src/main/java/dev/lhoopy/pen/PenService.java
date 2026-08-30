@@ -141,7 +141,7 @@ public final class PenService implements PluginService, Listener {
         this.menuBridge.open(player);
     }
 
-    public void handleFeedCommand(org.bukkit.command.CommandSender sender, String[] args) {
+    public void handleFeedCommand(Player sender, String[] args) {
         this.feedingCommand.handle(sender, args);
     }
 
